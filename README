@@ -1,0 +1,14 @@
+bcard
+
+bcard is an experimental attempt to make cheap electronic business card on a
+thin PCB.  The main goals are for it to be:
+
+    - cheap
+    - not gaudy
+    - not stupid
+    
+I originally wanted to make the card a flash drive that would store e.g. my
+resume, but I don't think that's possible, but only because it would cost too
+much.  Instead, I'll try to do that with a QR code pointing to a website.
+
+IDK, perhaps some kind of cool capacitive thing?
