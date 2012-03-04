@@ -1,0 +1,9 @@
+EESchema-DOCLIB  Version 2.0  Date: Wed 22 Dec 2010 12:42:05 AM EST
+#
+$CMP SN75176B
+D SN75176B - MAX485 Alternative
+K SN75176B, MAX485
+F http://www.ti.com/lit/gpn/sn75176b
+$ENDCMP
+#
+#End Doc Library

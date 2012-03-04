@@ -1,0 +1,9 @@
+EESchema-DOCLIB  Version 2.0  Date: 10/2/2009-18:11:58
+#
+$CMP XO-14S
+D Sinewave output clock oscillator
+K Quartz
+F http://www.4timing.com
+$ENDCMP
+#
+#End Doc Library

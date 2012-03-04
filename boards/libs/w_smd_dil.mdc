@@ -1,0 +1,68 @@
+PCBNEW-LibDoc----V1  sab 15 ago 2009 20:32:13 CEST
+#
+$MODULE so-16
+Li so-16
+Cd SO-16
+$EndMODULE
+#
+$MODULE so-14
+Li so-14
+Cd SO-14
+$EndMODULE
+#
+$MODULE so-8
+Li so-8
+Cd SO-8
+$EndMODULE
+#
+$MODULE tssop-14
+Li tssop-14
+Cd TSSOP-14
+$EndMODULE
+#
+$MODULE tssop-16
+Li tssop-16
+Cd TSSOP-16
+$EndMODULE
+#
+$MODULE tssop-20
+Li tssop-20
+Cd TSSOP-20
+$EndMODULE
+#
+$MODULE tssop-24
+Li tssop-24
+Cd TSSOP-24
+$EndMODULE
+#
+$MODULE tssop-28
+Li tssop-28
+Cd TSSOP-28
+$EndMODULE
+#
+$MODULE ssop-16
+Li ssop-16
+Cd SSOP-16
+$EndMODULE
+#
+$MODULE ssop-48
+Li ssop-48
+Cd SSOP-48
+$EndMODULE
+#
+$MODULE msoic-8
+Li msoic-8
+Cd MSOIC-8
+$EndMODULE
+#
+$MODULE msoic-10
+Li msoic-10
+Cd MSOIC-10
+$EndMODULE
+#
+$MODULE psop-8
+Li psop-8
+Cd PSOP-8
+$EndMODULE
+#
+$EndLIBDOC

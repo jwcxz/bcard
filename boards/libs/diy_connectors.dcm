@@ -1,0 +1,38 @@
+EESchema-DOCLIB  Version 2.0  Date: 13/2/2009-01:39:03
+#
+$CMP JACK_DC
+D DC Jack
+$ENDCMP
+#
+$CMP JACK_MONO
+D Jack Mono
+$ENDCMP
+#
+$CMP JACK_MONO_SW
+D Jack Mono Switched
+$ENDCMP
+#
+$CMP JACK_STEREO
+D Jack Stereo
+$ENDCMP
+#
+$CMP JACK_STEREO_SW
+D Jack Stereo Switched
+$ENDCMP
+#
+$CMP XLR3
+D XLR 3 pins
+K CONN
+$ENDCMP
+#
+$CMP XLR4
+D XLR 4 pins
+K CONN
+$ENDCMP
+#
+$CMP XLR5
+D XLR 5 pins
+K CONN
+$ENDCMP
+#
+#End Doc Library

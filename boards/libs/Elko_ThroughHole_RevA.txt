@@ -1,0 +1,22 @@
+# About
+Elko_ThroughHole_RevA.mod
+
+
+Contains the KiCAD module/footprint of some
+THT electrolytic capacitors.
+
+Elko_vert_DM14_RM5
+Elko_vert_DM12-5_RM5
+Elko_vert_DM16_RM7-5
+Elko_vert_DM5_RM2-5
+Elko_vert_DM7-5_RM2-5
+Elko_vert_DM10_RM2-5
+Elko_vert_DM10_RM5
+Elko_vert_DM10_RM2-5to5
+Elko_vert_DM10_RM7-5
+Elko_vert_DM10_RM5to7-5 
+
+
+Author: Bernd Wiebus / Uedem / Germany / 04 April 2011
+GNU-GPL, NO WARRANTY!
+
