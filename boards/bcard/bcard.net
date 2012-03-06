@@ -1,0 +1,22 @@
+# EESchema Netlist Version 1.1 created  Tue 06 Mar 2012 05:10:02 AM EST
+(
+ ( /4F55E25A $noname  U1 AT42QT1012 {Lib=AT42QT1012}
+  (    1 ? )
+  (    2 ? )
+  (    3 ? )
+  (    4 ? )
+  (    5 ? )
+  (    6 ? )
+ )
+)
+*
+{ Allowed footprints by component:
+$component U1
+ SOT23-6
+ UDFN-8
+$endlist
+$endfootprintlist
+}
+{ Pin List by Nets
+}
+#End
