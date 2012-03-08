@@ -1,4 +1,4 @@
-update=Tue 06 Mar 2012 05:08:07 AM EST
+update=Wed 07 Mar 2012 01:26:48 PM EST
 version=1
 last_client=eeschema
 [cvpcb]
@@ -47,7 +47,7 @@ LibName12=name
 LibName13=con-pci_express(pci-e)
 [eeschema]
 version=1
-LibDir=
+LibDir=../libs
 NetFmt=1
 HPGLSpd=20
 HPGLDm=15
@@ -107,4 +107,6 @@ LibName27=opto
 LibName28=atmel
 LibName29=contrib
 LibName30=valves
-LibName31=/home/j/projects/bcard/boards/libs/at42qt1012
+LibName31=at42qt1012
+LibName32=atmel2
+LibName33=bc846a

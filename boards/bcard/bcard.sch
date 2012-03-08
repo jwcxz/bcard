@@ -1,4 +1,4 @@
-EESchema Schematic File Version 2  date Tue 06 Mar 2012 05:40:34 AM EST
+EESchema Schematic File Version 2  date Wed 07 Mar 2012 02:03:20 PM EST
 LIBS:power
 LIBS:device
 LIBS:transistors
@@ -30,13 +30,16 @@ LIBS:atmel
 LIBS:contrib
 LIBS:valves
 LIBS:at42qt1012
-EELAYER 43  0
+LIBS:atmel2
+LIBS:bc846a
+LIBS:bcard-cache
+EELAYER 25  0
 EELAYER END
 $Descr A4 11700 8267
 encoding utf-8
 Sheet 1 1
 Title ""
-Date "6 mar 2012"
+Date "7 mar 2012"
 Rev ""
 Comp ""
 Comment1 ""
@@ -44,6 +47,49 @@ Comment2 ""
 Comment3 ""
 Comment4 ""
 $EndDescr
+Wire Wire Line
+	7500 4750 5650 4750
+Wire Wire Line
+	5650 4750 5200 4750
+Wire Wire Line
+	6300 4550 6300 5000
+Wire Wire Line
+	2050 4450 2050 4550
+Wire Wire Line
+	2050 4550 2000 4550
+Connection ~ 7800 4000
+Wire Wire Line
+	7800 4000 7800 3900
+Connection ~ 7650 4000
+Wire Wire Line
+	8250 4000 7950 4000
+Wire Wire Line
+	7950 4000 7800 4000
+Wire Wire Line
+	7800 4000 7650 4000
+Wire Wire Line
+	7650 4000 7350 4000
+Connection ~ 7650 4400
+Connection ~ 5750 4850
+Wire Wire Line
+	5750 5150 5750 4850
+Connection ~ 5550 4650
+Wire Wire Line
+	5550 5150 5550 4650
+Wire Wire Line
+	5350 5150 5250 5150
+Wire Wire Line
+	5250 5150 5250 5100
+Wire Wire Line
+	5200 4850 5750 4850
+Wire Wire Line
+	5750 4850 6050 4850
+Wire Wire Line
+	2650 4950 2800 4950
+Wire Wire Line
+	2650 4950 2650 4900
+Wire Wire Line
+	2800 4350 2800 4450
 Wire Wire Line
 	5750 2250 5750 2350
 Wire Wire Line
@@ -57,7 +103,9 @@ Wire Wire Line
 Wire Wire Line
 	4750 3200 4750 2950
 Wire Wire Line
-	4750 2800 4350 2800
+	4750 2800 4500 2800
+Wire Wire Line
+	4500 2800 4350 2800
 Connection ~ 4500 2800
 Wire Wire Line
 	5950 2800 6100 2800
@@ -67,8 +115,247 @@ Wire Wire Line
 	5350 3750 6100 3750
 Connection ~ 5350 3750
 Wire Wire Line
-	5350 2150 5350 2350
+	5350 2150 5350 2250
+Wire Wire Line
+	5350 2250 5350 2350
 Connection ~ 5350 2250
+Wire Wire Line
+	2800 4950 2800 5050
+Wire Wire Line
+	2800 4450 2650 4450
+Wire Wire Line
+	2650 4450 2650 4500
+Wire Wire Line
+	6000 5200 6000 5150
+Wire Wire Line
+	6000 5150 5850 5150
+Wire Wire Line
+	5450 5150 5450 4550
+Connection ~ 5450 4550
+Wire Wire Line
+	5650 4750 5650 5150
+Connection ~ 5650 4750
+Wire Wire Line
+	7350 4400 7650 4400
+Wire Wire Line
+	7650 4400 7800 4400
+Wire Wire Line
+	7800 4400 7950 4400
+Wire Wire Line
+	7950 4400 8250 4400
+Connection ~ 7950 4400
+Connection ~ 7950 4000
+Wire Wire Line
+	7800 4400 7800 4550
+Connection ~ 7800 4400
+Wire Wire Line
+	7800 4950 7800 5050
+Wire Wire Line
+	2000 4750 2050 4750
+Wire Wire Line
+	2050 4750 2050 4850
+Wire Wire Line
+	5800 4550 5450 4550
+Wire Wire Line
+	5450 4550 5200 4550
+Wire Wire Line
+	6300 5500 6300 5600
+Wire Wire Line
+	5200 4650 5550 4650
+Wire Wire Line
+	5550 4650 6400 4650
+$Comp
+L R R?
+U 1 1 4F57AD31
+P 6650 4650
+F 0 "R?" V 6730 4650 50  0000 C CNN
+F 1 "R" V 6650 4650 50  0000 C CNN
+	1    6650 4650
+	0    1    1    0   
+$EndComp
+$Comp
+L GND #PWR?
+U 1 1 4F57AD02
+P 6300 5600
+F 0 "#PWR?" H 6300 5600 30  0001 C CNN
+F 1 "GND" H 6300 5530 30  0001 C CNN
+	1    6300 5600
+	1    0    0    -1  
+$EndComp
+$Comp
+L R R?
+U 1 1 4F57ACF5
+P 6300 5250
+F 0 "R?" V 6380 5250 50  0000 C CNN
+F 1 "R" V 6300 5250 50  0000 C CNN
+	1    6300 5250
+	-1   0    0    1   
+$EndComp
+$Comp
+L R R?
+U 1 1 4F57ACE0
+P 6050 4550
+F 0 "R?" V 6130 4550 50  0000 C CNN
+F 1 "R" V 6050 4550 50  0000 C CNN
+	1    6050 4550
+	0    1    1    0   
+$EndComp
+$Comp
+L GND #PWR?
+U 1 1 4F57AAA7
+P 2050 4850
+F 0 "#PWR?" H 2050 4850 30  0001 C CNN
+F 1 "GND" H 2050 4780 30  0001 C CNN
+	1    2050 4850
+	1    0    0    -1  
+$EndComp
+$Comp
+L VCC #PWR?
+U 1 1 4F57AAA0
+P 2050 4450
+F 0 "#PWR?" H 2050 4550 30  0001 C CNN
+F 1 "VCC" H 2050 4550 30  0000 C CNN
+	1    2050 4450
+	1    0    0    -1  
+$EndComp
+$Comp
+L CONN_2 P1
+U 1 1 4F57AA8F
+P 1650 4650
+F 0 "P1" V 1600 4650 40  0000 C CNN
+F 1 "BATT" V 1700 4650 40  0000 C CNN
+	1    1650 4650
+	-1   0    0    -1  
+$EndComp
+$Comp
+L GND #PWR?
+U 1 1 4F57A9AD
+P 7800 5050
+F 0 "#PWR?" H 7800 5050 30  0001 C CNN
+F 1 "GND" H 7800 4980 30  0001 C CNN
+	1    7800 5050
+	1    0    0    -1  
+$EndComp
+$Comp
+L VCC #PWR?
+U 1 1 4F57A992
+P 7800 3900
+F 0 "#PWR?" H 7800 4000 30  0001 C CNN
+F 1 "VCC" H 7800 4000 30  0000 C CNN
+	1    7800 3900
+	1    0    0    -1  
+$EndComp
+$Comp
+L LED D4
+U 1 1 4F57A95A
+P 8250 4200
+F 0 "D4" H 8250 4300 50  0000 C CNN
+F 1 "LED" H 8250 4100 50  0000 C CNN
+	1    8250 4200
+	0    1    1    0   
+$EndComp
+$Comp
+L LED D3
+U 1 1 4F57A959
+P 7950 4200
+F 0 "D3" H 7950 4300 50  0000 C CNN
+F 1 "LED" H 7950 4100 50  0000 C CNN
+	1    7950 4200
+	0    1    1    0   
+$EndComp
+$Comp
+L LED D2
+U 1 1 4F57A956
+P 7650 4200
+F 0 "D2" H 7650 4300 50  0000 C CNN
+F 1 "LED" H 7650 4100 50  0000 C CNN
+	1    7650 4200
+	0    1    1    0   
+$EndComp
+$Comp
+L LED D1
+U 1 1 4F57A951
+P 7350 4200
+F 0 "D1" H 7350 4300 50  0000 C CNN
+F 1 "LED" H 7350 4100 50  0000 C CNN
+	1    7350 4200
+	0    1    1    0   
+$EndComp
+$Comp
+L BC846A Q1
+U 1 1 4F57A871
+P 7700 4750
+F 0 "Q1" H 7700 4600 50  0000 R CNN
+F 1 "BC846A" H 7700 4900 50  0000 R CNN
+F 4 "BC846A" H 7700 4750 60  0001 C CNN "Part"
+F 5 "http://search.digikey.com/us/en/products/BC846A,215/568-4866-1-ND/2122195" H 7700 4750 60  0001 C CNN "URL"
+	1    7700 4750
+	1    0    0    -1  
+$EndComp
+$Comp
+L VCC #PWR?
+U 1 1 4F57968D
+P 5250 5100
+F 0 "#PWR?" H 5250 5200 30  0001 C CNN
+F 1 "VCC" H 5250 5200 30  0000 C CNN
+	1    5250 5100
+	-1   0    0    -1  
+$EndComp
+$Comp
+L GND #PWR?
+U 1 1 4F579666
+P 6000 5200
+F 0 "#PWR?" H 6000 5200 30  0001 C CNN
+F 1 "GND" H 6000 5130 30  0001 C CNN
+	1    6000 5200
+	-1   0    0    -1  
+$EndComp
+$Comp
+L CONN_6 P2
+U 1 1 4F57962B
+P 5600 5500
+F 0 "P2" V 5550 5500 60  0000 C CNN
+F 1 "CONN_6" V 5650 5500 60  0000 C CNN
+	1    5600 5500
+	0    -1   1    0   
+$EndComp
+$Comp
+L C C1
+U 1 1 4F56F917
+P 2650 4700
+F 0 "C1" H 2700 4800 50  0000 L CNN
+F 1 "C" H 2700 4600 50  0000 L CNN
+	1    2650 4700
+	-1   0    0    -1  
+$EndComp
+$Comp
+L GND #PWR?
+U 1 1 4F56E7DD
+P 2800 5050
+F 0 "#PWR?" H 2800 5050 30  0001 C CNN
+F 1 "GND" H 2800 4980 30  0001 C CNN
+	1    2800 5050
+	-1   0    0    -1  
+$EndComp
+$Comp
+L VCC #PWR?
+U 1 1 4F56E7D3
+P 2800 4350
+F 0 "#PWR?" H 2800 4450 30  0001 C CNN
+F 1 "VCC" H 2800 4450 30  0000 C CNN
+	1    2800 4350
+	-1   0    0    -1  
+$EndComp
+$Comp
+L ATTINY10-TS IC1
+U 1 1 4F56DC44
+P 4000 4700
+F 0 "IC1" H 3100 5100 60  0000 C CNN
+F 1 "ATTINY10-TS" H 4700 4300 60  0000 C CNN
+F 2 "SOT23-6" H 3200 4300 60  0001 C CNN
+	1    4000 4700
+	-1   0    0    -1  
+$EndComp
 $Comp
 L GND #PWR?
 U 1 1 4F55E852
