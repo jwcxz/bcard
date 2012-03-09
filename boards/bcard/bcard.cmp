@@ -1,0 +1,115 @@
+Cmp-Mod V01 Created by CvPCB (2011-07-08)-stable date = Thu 08 Mar 2012 06:59:56 PM EST
+
+BeginCmp
+TimeStamp = /4F56F917;
+Reference = C1;
+ValeurCmp = 10uF;
+IdModule  = SM0805;
+EndCmp
+
+BeginCmp
+TimeStamp = /4F57A951;
+Reference = D1;
+ValeurCmp = LED;
+IdModule  = SM1206POL;
+EndCmp
+
+BeginCmp
+TimeStamp = /4F5860BF;
+Reference = D2;
+ValeurCmp = LED;
+IdModule  = SM1206POL;
+EndCmp
+
+BeginCmp
+TimeStamp = /4F5860C2;
+Reference = D3;
+ValeurCmp = LED;
+IdModule  = SM1206POL;
+EndCmp
+
+BeginCmp
+TimeStamp = /4F5860C5;
+Reference = D4;
+ValeurCmp = LED;
+IdModule  = SM1206POL;
+EndCmp
+
+BeginCmp
+TimeStamp = /4F56DC44;
+Reference = IC1;
+ValeurCmp = ATTINY10-TS;
+IdModule  = SOT23_6;
+EndCmp
+
+BeginCmp
+TimeStamp = /4F57AA8F;
+Reference = P1;
+ValeurCmp = BATT;
+IdModule  = 2032BATTHOLDER;
+EndCmp
+
+BeginCmp
+TimeStamp = /4F57962B;
+Reference = P2;
+ValeurCmp = CONN_6;
+IdModule  = SIL-6;
+EndCmp
+
+BeginCmp
+TimeStamp = /4F58FB2F;
+Reference = PAD1;
+ValeurCmp = CONN_1;
+IdModule  = PINTST;
+EndCmp
+
+BeginCmp
+TimeStamp = /4F58FB7D;
+Reference = PAD2;
+ValeurCmp = CONN_1;
+IdModule  = PINTST;
+EndCmp
+
+BeginCmp
+TimeStamp = /4F58FE84;
+Reference = PB3;
+ValeurCmp = CONN_1;
+IdModule  = PINTST;
+EndCmp
+
+BeginCmp
+TimeStamp = /4F57A871;
+Reference = Q1;
+ValeurCmp = BC846A;
+IdModule  = SOT323;
+EndCmp
+
+BeginCmp
+TimeStamp = /4F57ACE0;
+Reference = R1;
+ValeurCmp = 200;
+IdModule  = SM0603;
+EndCmp
+
+BeginCmp
+TimeStamp = /4F57ACF5;
+Reference = R2;
+ValeurCmp = 1M;
+IdModule  = SM0603;
+EndCmp
+
+BeginCmp
+TimeStamp = /4F58FE3C;
+Reference = R3;
+ValeurCmp = 200;
+IdModule  = SM0603;
+EndCmp
+
+BeginCmp
+TimeStamp = /4F58FB63;
+Reference = R4;
+ValeurCmp = 1M;
+IdModule  = SM0603;
+EndCmp
+
+EndListe

@@ -1,22 +1,142 @@
-# EESchema Netlist Version 1.1 created  Tue 06 Mar 2012 05:10:02 AM EST
+# EESchema Netlist Version 1.1 created  Thu 08 Mar 2012 06:59:56 PM EST
 (
- ( /4F55E25A $noname  U1 AT42QT1012 {Lib=AT42QT1012}
-  (    1 ? )
-  (    2 ? )
-  (    3 ? )
-  (    4 ? )
-  (    5 ? )
-  (    6 ? )
+ ( /4F56F917 SM0805 C1 10uF
+  ( 1 VCC )
+  ( 2 GND )
+ )
+ ( /4F57A951 SM1206POL D1 LED
+  ( 1 VCC )
+  ( 2 N-000001 )
+ )
+ ( /4F5860BF SM1206POL D2 LED
+  ( 1 VCC )
+  ( 2 N-000001 )
+ )
+ ( /4F5860C2 SM1206POL D3 LED
+  ( 1 VCC )
+  ( 2 N-000001 )
+ )
+ ( /4F5860C5 SM1206POL D4 LED
+  ( 1 VCC )
+  ( 2 N-000001 )
+ )
+ ( /4F56DC44 SOT23_6 IC1 ATTINY10-TS
+  ( 1 N-000009 )
+  ( 2 GND )
+  ( 3 N-000006 )
+  ( 4 N-000008 )
+  ( 5 VCC )
+  ( 6 N-000007 )
+ )
+ ( /4F57AA8F 2032BATTHOLDER P1 BATT
+  ( 1 VCC )
+  ( 2 GND )
+ )
+ ( /4F57962B SIL-6 P2 CONN_6
+  ( 1 VCC )
+  ( 2 N-000009 )
+  ( 3 N-000006 )
+  ( 4 N-000008 )
+  ( 5 N-000007 )
+  ( 6 GND )
+ )
+ ( /4F58FB2F PINTST PAD1 CONN_1
+  ( 1 N-000003 )
+ )
+ ( /4F58FB7D PINTST PAD2 CONN_1
+  ( 1 N-000005 )
+ )
+ ( /4F58FE84 PINTST PB3 CONN_1
+  ( 1 N-000007 )
+ )
+ ( /4F57A871 SOT323 Q1 BC846A
+  ( 1 N-000008 )
+  ( 2 GND )
+  ( 3 N-000001 )
+ )
+ ( /4F57ACE0 SM0603 R1 200
+  ( 1 N-000003 )
+  ( 2 N-000009 )
+ )
+ ( /4F57ACF5 SM0603 R2 1M
+  ( 1 GND )
+  ( 2 N-000003 )
+ )
+ ( /4F58FE3C SM0603 R3 200
+  ( 1 N-000005 )
+  ( 2 N-000006 )
+ )
+ ( /4F58FB63 SM0603 R4 1M
+  ( 1 GND )
+  ( 2 N-000005 )
  )
 )
 *
 { Allowed footprints by component:
-$component U1
- SOT23-6
- UDFN-8
+$component C1
+ SM*
+ C?
+ C1-1
+$endlist
+$component D1
+ LED-3MM
+ LED-5MM
+ LED-10MM
+ LED-0603
+ LED-0805
+ LED-1206
+ LEDV
+$endlist
+$component D2
+ LED-3MM
+ LED-5MM
+ LED-10MM
+ LED-0603
+ LED-0805
+ LED-1206
+ LEDV
+$endlist
+$component D3
+ LED-3MM
+ LED-5MM
+ LED-10MM
+ LED-0603
+ LED-0805
+ LED-1206
+ LEDV
+$endlist
+$component D4
+ LED-3MM
+ LED-5MM
+ LED-10MM
+ LED-0603
+ LED-0805
+ LED-1206
+ LEDV
+$endlist
+$component R1
+ R?
+ SM0603
+ SM0805
+ R?-*
+$endlist
+$component R2
+ R?
+ SM0603
+ SM0805
+ R?-*
+$endlist
+$component R3
+ R?
+ SM0603
+ SM0805
+ R?-*
+$endlist
+$component R4
+ R?
+ SM0603
+ SM0805
+ R?-*
 $endlist
 $endfootprintlist
 }
-{ Pin List by Nets
-}
-#End
