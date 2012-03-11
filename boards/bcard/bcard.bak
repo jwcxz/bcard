@@ -1,4 +1,4 @@
-EESchema Schematic File Version 2  date Thu 08 Mar 2012 06:50:12 PM EST
+EESchema Schematic File Version 2  date Thu 08 Mar 2012 06:50:20 PM EST
 LIBS:power
 LIBS:device
 LIBS:transistors
@@ -78,9 +78,7 @@ Wire Wire Line
 Wire Wire Line
 	6400 4550 6300 4550
 Wire Wire Line
-	5200 4750 5650 4750
-Wire Wire Line
-	5650 4750 7500 4750
+	5200 4750 7500 4750
 Wire Wire Line
 	6300 4550 6300 5000
 Wire Wire Line
@@ -92,13 +90,7 @@ Wire Wire Line
 	7800 4000 7800 3900
 Connection ~ 7650 4000
 Wire Wire Line
-	7350 4000 7650 4000
-Wire Wire Line
-	7650 4000 7800 4000
-Wire Wire Line
-	7800 4000 7950 4000
-Wire Wire Line
-	7950 4000 8250 4000
+	7350 4000 8250 4000
 Connection ~ 7650 4400
 Connection ~ 5750 4850
 Wire Wire Line
@@ -133,13 +125,7 @@ Wire Wire Line
 	5650 5150 5650 4750
 Connection ~ 5650 4750
 Wire Wire Line
-	8250 4400 7950 4400
-Wire Wire Line
-	7950 4400 7800 4400
-Wire Wire Line
-	7800 4400 7650 4400
-Wire Wire Line
-	7650 4400 7350 4400
+	8250 4400 7350 4400
 Connection ~ 7950 4400
 Connection ~ 7950 4000
 Wire Wire Line
@@ -152,19 +138,13 @@ Wire Wire Line
 Wire Wire Line
 	2050 4750 2050 4850
 Wire Wire Line
-	5200 4550 5450 4550
-Wire Wire Line
-	5450 4550 5800 4550
+	5200 4550 5800 4550
 Wire Wire Line
 	6300 5500 6300 5600
 Wire Wire Line
-	6400 4650 5550 4650
+	6400 4650 5200 4650
 Wire Wire Line
-	5550 4650 5200 4650
-Wire Wire Line
-	7050 4850 5750 4850
-Wire Wire Line
-	5750 4850 5200 4850
+	7050 4850 5200 4850
 Wire Wire Line
 	6900 5500 6900 5600
 $Comp
@@ -188,10 +168,10 @@ F 5 "http://search.digikey.com/us/en/products/RC0603JR-071ML/311-1.0MGRCT-ND/729
 	-1   0    0    1   
 $EndComp
 $Comp
-L GND #PWR?
+L GND #PWR01
 U 1 1 4F58FB55
 P 6900 5600
-F 0 "#PWR?" H 6900 5600 30  0001 C CNN
+F 0 "#PWR01" H 6900 5600 30  0001 C CNN
 F 1 "GND" H 6900 5530 30  0001 C CNN
 	1    6900 5600
 	1    0    0    -1  
@@ -239,10 +219,10 @@ F 5 "http://search.digikey.com/us/en/products/APT3216QBC%2FD/754-1439-1-ND/21637
 	0    1    1    0   
 $EndComp
 $Comp
-L GND #PWR?
+L GND #PWR02
 U 1 1 4F57AD02
 P 6300 5600
-F 0 "#PWR?" H 6300 5600 30  0001 C CNN
+F 0 "#PWR02" H 6300 5600 30  0001 C CNN
 F 1 "GND" H 6300 5530 30  0001 C CNN
 	1    6300 5600
 	1    0    0    -1  
@@ -270,19 +250,19 @@ F 5 "http://search.digikey.com/us/en/products/RC0603FR-07200RL/311-200HRCT-ND/72
 	0    1    -1   0   
 $EndComp
 $Comp
-L GND #PWR?
+L GND #PWR03
 U 1 1 4F57AAA7
 P 2050 4850
-F 0 "#PWR?" H 2050 4850 30  0001 C CNN
+F 0 "#PWR03" H 2050 4850 30  0001 C CNN
 F 1 "GND" H 2050 4780 30  0001 C CNN
 	1    2050 4850
 	1    0    0    -1  
 $EndComp
 $Comp
-L VCC #PWR?
+L VCC #PWR04
 U 1 1 4F57AAA0
 P 2050 4450
-F 0 "#PWR?" H 2050 4550 30  0001 C CNN
+F 0 "#PWR04" H 2050 4550 30  0001 C CNN
 F 1 "VCC" H 2050 4550 30  0000 C CNN
 	1    2050 4450
 	1    0    0    -1  
@@ -297,19 +277,19 @@ F 1 "BATT" V 1700 4650 40  0000 C CNN
 	-1   0    0    -1  
 $EndComp
 $Comp
-L GND #PWR?
+L GND #PWR05
 U 1 1 4F57A9AD
 P 7800 5050
-F 0 "#PWR?" H 7800 5050 30  0001 C CNN
+F 0 "#PWR05" H 7800 5050 30  0001 C CNN
 F 1 "GND" H 7800 4980 30  0001 C CNN
 	1    7800 5050
 	1    0    0    -1  
 $EndComp
 $Comp
-L VCC #PWR?
+L VCC #PWR06
 U 1 1 4F57A992
 P 7800 3900
-F 0 "#PWR?" H 7800 4000 30  0001 C CNN
+F 0 "#PWR06" H 7800 4000 30  0001 C CNN
 F 1 "VCC" H 7800 4000 30  0000 C CNN
 	1    7800 3900
 	1    0    0    -1  
@@ -337,19 +317,19 @@ F 5 "http://search.digikey.com/us/en/products/BC846A,215/568-4866-1-ND/2122195" 
 	1    0    0    -1  
 $EndComp
 $Comp
-L VCC #PWR?
+L VCC #PWR07
 U 1 1 4F57968D
 P 5250 5100
-F 0 "#PWR?" H 5250 5200 30  0001 C CNN
+F 0 "#PWR07" H 5250 5200 30  0001 C CNN
 F 1 "VCC" H 5250 5200 30  0000 C CNN
 	1    5250 5100
 	-1   0    0    -1  
 $EndComp
 $Comp
-L GND #PWR?
+L GND #PWR08
 U 1 1 4F579666
 P 6000 5200
-F 0 "#PWR?" H 6000 5200 30  0001 C CNN
+F 0 "#PWR08" H 6000 5200 30  0001 C CNN
 F 1 "GND" H 6000 5130 30  0001 C CNN
 	1    6000 5200
 	-1   0    0    -1  
@@ -375,19 +355,19 @@ F 5 "http://search.digikey.com/us/en/products/GRM21BR60J106KE19L/490-1717-1-ND/5
 	-1   0    0    -1  
 $EndComp
 $Comp
-L GND #PWR?
+L GND #PWR09
 U 1 1 4F56E7DD
 P 2800 5050
-F 0 "#PWR?" H 2800 5050 30  0001 C CNN
+F 0 "#PWR09" H 2800 5050 30  0001 C CNN
 F 1 "GND" H 2800 4980 30  0001 C CNN
 	1    2800 5050
 	-1   0    0    -1  
 $EndComp
 $Comp
-L VCC #PWR?
+L VCC #PWR010
 U 1 1 4F56E7D3
 P 2800 4350
-F 0 "#PWR?" H 2800 4450 30  0001 C CNN
+F 0 "#PWR010" H 2800 4450 30  0001 C CNN
 F 1 "VCC" H 2800 4450 30  0000 C CNN
 	1    2800 4350
 	-1   0    0    -1  
