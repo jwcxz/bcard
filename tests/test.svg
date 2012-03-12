@@ -7,6 +7,7 @@
    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
    xmlns:svg="http://www.w3.org/2000/svg"
    xmlns="http://www.w3.org/2000/svg"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    width="315"
@@ -22,19 +23,33 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="5.5547166"
-     inkscape:cx="164.30298"
-     inkscape:cy="43.334717"
+     inkscape:zoom="2.9111111"
+     inkscape:cx="157.5"
+     inkscape:cy="90"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="false"
-     inkscape:window-width="1438"
-     inkscape:window-height="883"
+     inkscape:window-width="1366"
+     inkscape:window-height="753"
      inkscape:window-x="0"
      inkscape:window-y="15"
      inkscape:window-maximized="0" />
   <defs
-     id="defs4" />
+     id="defs4">
+    <marker
+       inkscape:stockid="Arrow1Send"
+       orient="auto"
+       refY="0.0"
+       refX="0.0"
+       id="Arrow1Send"
+       style="overflow:visible;">
+      <path
+         id="path4112"
+         d="M 0.0,0.0 L 5.0,-5.0 L -12.5,0.0 L 5.0,5.0 L 0.0,0.0 z "
+         style="fill-rule:evenodd;stroke:#000000;stroke-width:1.0pt;"
+         transform="scale(0.2) rotate(180) translate(6,0)" />
+    </marker>
+  </defs>
   <metadata
      id="metadata7">
     <rdf:RDF>
@@ -53,40 +68,101 @@
      inkscape:groupmode="layer"
      inkscape:label="Layer 1">
     <text
-       sodipodi:linespacing="125%"
-       id="text3758"
-       y="972.18683"
-       x="157.91194"
-       style="font-size:37.49518204px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans;-inkscape-font-specification:mtx Bold"
-       xml:space="preserve"><tspan
-         y="972.18683"
-         x="159.33194"
-         id="tspan3760"
-         sodipodi:role="line"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;letter-spacing:2.83999991px;font-family:Roboto;-inkscape-font-specification:Roboto">Joe Colosimo</tspan></text>
-    <text
        xml:space="preserve"
-       style="font-size:32px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:Myriad CAD;-inkscape-font-specification:Myriad CAD Bold"
-       x="69.820137"
-       y="985.75214"
-       id="text2995"
-       sodipodi:linespacing="125%"><tspan
+       style="font-size:12px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:TeX Gyre Heros;-inkscape-font-specification:TeX Gyre Heros"
+       x="137.90082"
+       y="24.456511"
+       id="text3228"
+       sodipodi:linespacing="125%"
+       transform="translate(0,872.36218)"><tspan
          sodipodi:role="line"
-         id="tspan2997"
-         x="69.820137"
-         y="985.75214"
-         style="font-size:14px;font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;font-family:Roboto;-inkscape-font-specification:Roboto Medium">662 205 0760</tspan></text>
+         id="tspan3230"></tspan></text>
+    <g
+       id="g3299"
+       transform="translate(0,-3.1155049)">
+      <text
+         sodipodi:linespacing="125%"
+         id="text2995"
+         y="939.49493"
+         x="153.39497"
+         style="font-size:32px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:center;line-height:125%;letter-spacing:1.45000005px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:Myriad CAD;-inkscape-font-specification:Myriad CAD Bold"
+         xml:space="preserve"><tspan
+           style="font-size:14px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;letter-spacing:1.35000002px;font-family:Roboto;-inkscape-font-specification:Roboto Medium"
+           y="939.49493"
+           x="154.06998"
+           id="tspan2997"
+           sodipodi:role="line">662 205 0760</tspan></text>
+      <text
+         xml:space="preserve"
+         style="font-size:32px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:Myriad CAD;-inkscape-font-specification:Myriad CAD Bold"
+         x="154.35866"
+         y="925.57538"
+         id="text3001"
+         sodipodi:linespacing="125%"><tspan
+           sodipodi:role="line"
+           id="tspan3003"
+           x="154.35866"
+           y="925.57538"
+           style="font-size:14px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;letter-spacing:0px;font-family:Roboto;-inkscape-font-specification:Roboto Medium">jwc@jwcxz.com</tspan></text>
+    </g>
+    <image
+       y="213.39632"
+       x="-973.36353"
+       id="image3173"
+       xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABUAAAAVCAIAAAAmdTLBAAAAA3NCSVQICAjb4U/gAAAAuElEQVQ4
+jYVUQQ7AIAiDxf9/2R1YKtDiOBiHQkuRmSnbe+c1TN5cuAdz93C6ezuSN4u3IUt/9jySFdJzWLNb
+PBh+PJWtTCYbPE2FC5cePGlR8KeD0F8yusFK5LbR6fDNPb+8n6N/6ATaHCPleHJ6RMYeyk/9OwBc
+6r20AzkVJsF5KJbklivKD4lvjvM30bEqU6nKSAhmZLUF4/w0kNZUrD/z1zKiNGzG+bParfxTsvRG
+NBT3mXWJ/QukUCtmnlVJJwAAAABJRU5ErkJggg==
+"
+       height="62.0462"
+       width="62.0462"
+       transform="matrix(0,-1,1,0,0,0)" />
+    <g
+       id="g3317">
+      <text
+         xml:space="preserve"
+         style="font-size:37.49518204px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans;-inkscape-font-specification:mtx Bold"
+         x="63.618591"
+         y="936.58905"
+         id="text3758"
+         sodipodi:linespacing="125%"><tspan
+           style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;letter-spacing:3.19000006px;font-family:Myriad PRO;-inkscape-font-specification:Myriad PRO"
+           sodipodi:role="line"
+           id="tspan3760"
+           x="65.213593"
+           y="936.58905">Joe</tspan></text>
+      <text
+         sodipodi:linespacing="125%"
+         id="text3232"
+         y="972.95105"
+         x="119.36453"
+         style="font-size:37.49518204px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans;-inkscape-font-specification:mtx Bold"
+         xml:space="preserve"><tspan
+           y="972.95105"
+           x="120.95953"
+           id="tspan3234"
+           sodipodi:role="line"
+           style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;letter-spacing:3.19000006px;font-family:Myriad PRO;-inkscape-font-specification:Myriad PRO">Colosimo</tspan></text>
+    </g>
     <text
        sodipodi:linespacing="125%"
-       id="text3001"
-       y="942.54559"
-       x="233.63885"
-       style="font-size:32px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:Myriad CAD;-inkscape-font-specification:Myriad CAD Bold"
-       xml:space="preserve"><tspan
-         style="font-size:14px;font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;letter-spacing:0.75px;font-family:Roboto;-inkscape-font-specification:Roboto Medium"
-         y="942.54559"
-         x="234.01385"
-         id="tspan3003"
-         sodipodi:role="line">jwc@jwcxz.com</tspan></text>
+       id="text3001-7"
+       y="287.55899"
+       x="-941.70917"
+       style="font-size:27.87665176px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:Myriad CAD;-inkscape-font-specification:Myriad CAD Bold"
+       xml:space="preserve"
+       transform="matrix(0,-1,1,0,0,0)"><tspan
+         style="font-size:12.19603539px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;letter-spacing:0px;font-family:Roboto;-inkscape-font-specification:Roboto Medium"
+         y="287.55899"
+         x="-941.70917"
+         id="tspan3003-5"
+         sodipodi:role="line">jwcxz.com</tspan></text>
+    <path
+       style="fill:none;stroke:#000000;stroke-width:2;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;marker-end:url(#Arrow1Send)"
+       d="m 286.66141,973.18053 c 0.0379,0.89839 3.07905,15.80437 -9.98712,4.10222"
+       id="path3323"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="cc" />
   </g>
 </svg>
