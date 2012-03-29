@@ -1,4 +1,4 @@
-update=Thu 29 Mar 2012 02:20:53 AM EDT
+update=Thu 29 Mar 2012 05:27:11 PM EDT
 version=1
 last_client=pcbnew
 [cvpcb]
@@ -63,8 +63,8 @@ LibName34=logo
 version=1
 LastNetListRead=bcard.net
 PadDrlX=0
-PadDimH=0
-PadDimV=0
+PadDimH=800
+PadDimV=800
 BoardThickness=630
 TxtPcbV=800
 TxtPcbH=600
@@ -93,3 +93,5 @@ LibName12=2032battholder
 LibName13=jwcxz-qr
 LibName14=pin
 LibName15=sensor
+LibName16=links
+LibName17=wvpads
