@@ -1,0 +1,14 @@
+EESchema-LIBRARY Version 2.3  Date: Wed 28 Mar 2012 04:49:32 PM EDT
+#encoding utf-8
+#
+# LOGO
+#
+DEF LOGO LOGO 0 40 Y Y 1 F N
+F0 "LOGO" 0 -50 60 H V C CNN
+F1 "LOGO" 0 50 60 H V C CNN
+DRAW
+S -200 150 200 -150 0 1 0 N
+ENDDRAW
+ENDDEF
+#
+#End Library

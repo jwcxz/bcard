@@ -1,196 +1,231 @@
-# EESchema Netlist Version 1.1 created  Fri 09 Mar 2012 11:26:30 PM EST
-(
- ( /4F58FE84 $noname  PB3 CONN_1 {Lib=CONN_1}
-  (    1 N-000007 )
- )
- ( /4F58FE3C $noname  R3 200 {Lib=R}
-  (    1 N-000005 )
-  (    2 N-000006 )
- )
- ( /4F58FB7D $noname  PAD2 CONN_1 {Lib=CONN_1}
-  (    1 N-000005 )
- )
- ( /4F58FB63 $noname  R4 1M {Lib=R}
-  (    1 GND )
-  (    2 N-000005 )
- )
- ( /4F58FB2F $noname  PAD1 CONN_1 {Lib=CONN_1}
-  (    1 N-000003 )
- )
- ( /4F5860C5 $noname  D4 LED {Lib=LED}
-  (    1 VCC )
-  (    2 N-000001 )
- )
- ( /4F5860C2 $noname  D3 LED {Lib=LED}
-  (    1 VCC )
-  (    2 N-000001 )
- )
- ( /4F5860BF $noname  D2 LED {Lib=LED}
-  (    1 VCC )
-  (    2 N-000001 )
- )
- ( /4F57ACF5 $noname  R2 1M {Lib=R}
-  (    1 GND )
-  (    2 N-000003 )
- )
- ( /4F57ACE0 $noname  R1 200 {Lib=R}
-  (    1 N-000003 )
-  (    2 N-000009 )
- )
- ( /4F57AA8F $noname  P1 BATT {Lib=CONN_2}
-  (    1 VCC )
-  (    2 GND )
- )
- ( /4F57A951 $noname  D1 LED {Lib=LED}
-  (    1 VCC )
-  (    2 N-000001 )
- )
- ( /4F57A871 $noname  Q1 BC846A {Lib=BC846A}
-  (    1 N-000008 )
-  (    2 GND )
-  (    3 N-000001 )
- )
- ( /4F57962B $noname  P2 CONN_6 {Lib=CONN_6}
-  (    1 VCC )
-  (    2 N-000009 )
-  (    3 N-000006 )
-  (    4 N-000008 )
-  (    5 N-000007 )
-  (    6 GND )
- )
- ( /4F56F917 $noname  C1 10uF {Lib=C}
-  (    1 VCC )
-  (    2 GND )
- )
- ( /4F56DC44 SOT23-6  IC1 ATTINY10-TS {Lib=ATTINY10-TS}
-  (    1 N-000009 )
-  (    2 GND )
-  (    3 N-000006 )
-  (    4 N-000008 )
-  (    5 VCC )
-  (    6 N-000007 )
- )
-)
-*
-{ Allowed footprints by component:
-$component R3
- R?
- SM0603
- SM0805
- R?-*
- SM1206
-$endlist
-$component R4
- R?
- SM0603
- SM0805
- R?-*
- SM1206
-$endlist
-$component D4
- LED-3MM
- LED-5MM
- LED-10MM
- LED-0603
- LED-0805
- LED-1206
- LEDV
-$endlist
-$component D3
- LED-3MM
- LED-5MM
- LED-10MM
- LED-0603
- LED-0805
- LED-1206
- LEDV
-$endlist
-$component D2
- LED-3MM
- LED-5MM
- LED-10MM
- LED-0603
- LED-0805
- LED-1206
- LEDV
-$endlist
-$component R2
- R?
- SM0603
- SM0805
- R?-*
- SM1206
-$endlist
-$component R1
- R?
- SM0603
- SM0805
- R?-*
- SM1206
-$endlist
-$component D1
- LED-3MM
- LED-5MM
- LED-10MM
- LED-0603
- LED-0805
- LED-1206
- LEDV
-$endlist
-$component C1
- SM*
- C?
- C1-1
-$endlist
-$endfootprintlist
-}
-{ Pin List by Nets
-Net 1 "" ""
- D4 2
- Q1 3
- D3 2
- D2 2
- D1 2
-Net 2 "VCC" "VCC"
- D3 1
- IC1 5
- C1 1
- P2 1
- D1 1
- P1 1
- D2 1
- D4 1
-Net 3 "" ""
- R1 1
- R2 2
- PAD1 1
-Net 4 "GND" "GND"
- R2 1
- R4 1
- P2 6
- IC1 2
- Q1 2
- C1 2
- P1 2
-Net 5 "" ""
- PAD2 1
- R4 2
- R3 1
-Net 6 "" ""
- R3 2
- P2 3
- IC1 3
-Net 7 "" ""
- PB3 1
- P2 5
- IC1 6
-Net 8 "" ""
- IC1 4
- Q1 1
- P2 4
-Net 9 "" ""
- P2 2
- IC1 1
- R1 2
-}
-#End
+(export (version D)
+  (design
+    (source /home/j/projects/bcard/boards/bcard/bcard.sch)
+    (date "Thu 29 Mar 2012 03:42:14 AM EDT")
+    (tool "eeschema (2012-03-17 BZR 3466)-stable"))
+  (components
+    (comp (ref D4)
+      (value LED)
+      (footprint LED-1206-3D)
+      (fields
+        (field (name Part) APT3216QBC/D)
+        (field (name URL) http://search.digikey.com/us/en/products/APT3216QBC%2FD/754-1439-1-ND/2163797))
+      (libsource (lib device) (part LED))
+      (sheetpath (names /) (tstamps /))
+      (tstamp 4F5860C5))
+    (comp (ref D3)
+      (value LED)
+      (footprint LED-1206-3D)
+      (fields
+        (field (name Part) APT3216QBC/D)
+        (field (name URL) http://search.digikey.com/us/en/products/APT3216QBC%2FD/754-1439-1-ND/2163797))
+      (libsource (lib device) (part LED))
+      (sheetpath (names /) (tstamps /))
+      (tstamp 4F5860C2))
+    (comp (ref D2)
+      (value LED)
+      (footprint LED-1206-3D)
+      (fields
+        (field (name Part) APT3216QBC/D)
+        (field (name URL) http://search.digikey.com/us/en/products/APT3216QBC%2FD/754-1439-1-ND/2163797))
+      (libsource (lib device) (part LED))
+      (sheetpath (names /) (tstamps /))
+      (tstamp 4F5860BF))
+    (comp (ref R1)
+      (value 1M)
+      (footprint SM0805)
+      (fields
+        (field (name Part) RC0603JR-071ML)
+        (field (name URL) http://search.digikey.com/us/en/products/RC0603JR-071ML/311-1.0MGRCT-ND/729625))
+      (libsource (lib device) (part R))
+      (sheetpath (names /) (tstamps /))
+      (tstamp 4F57ACF5))
+    (comp (ref P1)
+      (value BATT)
+      (footprint 2032BATTHOLDER)
+      (libsource (lib conn) (part CONN_2))
+      (sheetpath (names /) (tstamps /))
+      (tstamp 4F57AA8F))
+    (comp (ref D1)
+      (value LED)
+      (footprint LED-1206-3D)
+      (fields
+        (field (name Part) APT3216QBC/D)
+        (field (name URL) http://search.digikey.com/us/en/products/APT3216QBC%2FD/754-1439-1-ND/2163797))
+      (libsource (lib device) (part LED))
+      (sheetpath (names /) (tstamps /))
+      (tstamp 4F57A951))
+    (comp (ref Q1)
+      (value BC846A)
+      (footprint SOT323)
+      (fields
+        (field (name Part) BC846A)
+        (field (name URL) http://search.digikey.com/us/en/products/BC846A,215/568-4866-1-ND/2122195))
+      (libsource (lib bc846a) (part BC846A))
+      (sheetpath (names /) (tstamps /))
+      (tstamp 4F57A871))
+    (comp (ref C1)
+      (value 10uF)
+      (footprint SM0805)
+      (fields
+        (field (name Part) GRM21BR60J106KE19L)
+        (field (name URL) http://search.digikey.com/us/en/products/GRM21BR60J106KE19L/490-1717-1-ND/587426))
+      (libsource (lib device) (part C))
+      (sheetpath (names /) (tstamps /))
+      (tstamp 4F56F917))
+    (comp (ref IC1)
+      (value ATTINY10-TS)
+      (footprint DIP-28__300)
+      (fields
+        (field (name Part) ATTINY10-TSHR)
+        (field (name URL) http://search.digikey.com/us/en/products/ATTINY10-TSHR/ATTINY10-TSHRCT-ND/2136158))
+      (libsource (lib atmel) (part ATTINY10-TS))
+      (sheetpath (names /) (tstamps /))
+      (tstamp 4F56DC44))
+    (comp (ref LOGO1)
+      (value NAME)
+      (libsource (lib logo) (part LOGO))
+      (sheetpath (names /) (tstamps /))
+      (tstamp 4F737976))
+    (comp (ref LOGO2)
+      (value QRCODE)
+      (libsource (lib logo) (part LOGO))
+      (sheetpath (names /) (tstamps /))
+      (tstamp 4F738885))
+    (comp (ref PAD1)
+      (value CONN_2)
+      (libsource (lib conn) (part CONN_2))
+      (sheetpath (names /) (tstamps /))
+      (tstamp 4F740194))
+    (comp (ref PRST1)
+      (value CONN_1)
+      (libsource (lib conn) (part CONN_1))
+      (sheetpath (names /) (tstamps /))
+      (tstamp 4F741158)))
+  (libparts
+    (libpart (lib device) (part C)
+      (description "Condensateur non polarise")
+      (footprints
+        (fp SM*)
+        (fp C?)
+        (fp C1-1))
+      (fields
+        (field (name Reference) C)
+        (field (name Value) C))
+      (pins
+        (pin (num 1) (name ~) (type passive))
+        (pin (num 2) (name ~) (type passive))))
+    (libpart (lib device) (part LED)
+      (footprints
+        (fp LED-3MM)
+        (fp LED-5MM)
+        (fp LED-10MM)
+        (fp LED-0603)
+        (fp LED-0805)
+        (fp LED-1206)
+        (fp LEDV))
+      (fields
+        (field (name Reference) D)
+        (field (name Value) LED))
+      (pins
+        (pin (num 1) (name A) (type passive))
+        (pin (num 2) (name K) (type passive))))
+    (libpart (lib device) (part R)
+      (description Resistance)
+      (footprints
+        (fp R?)
+        (fp SM0603)
+        (fp SM0805)
+        (fp R?-*)
+        (fp SM1206))
+      (fields
+        (field (name Reference) R)
+        (field (name Value) R))
+      (pins
+        (pin (num 1) (name ~) (type passive))
+        (pin (num 2) (name ~) (type passive))))
+    (libpart (lib conn) (part CONN_1)
+      (description "1 pin")
+      (fields
+        (field (name Reference) P)
+        (field (name Value) CONN_1))
+      (pins
+        (pin (num 1) (name 1) (type passive))))
+    (libpart (lib conn) (part CONN_2)
+      (description "Symbole general de connecteur")
+      (fields
+        (field (name Reference) P)
+        (field (name Value) CONN_2))
+      (pins
+        (pin (num 1) (name P1) (type passive))
+        (pin (num 2) (name PM) (type passive))))
+    (libpart (lib atmel) (part ATTINY10-TS)
+      (description "ATTINY10, SOT23-6, 1k Flash, 32B SRAM, No EEPROM, ADC")
+      (docs http://www.atmel.com/dyn/resources/prod_documents/doc8127.pdf)
+      (fields
+        (field (name Reference) IC)
+        (field (name Value) ATTINY10-TS)
+        (field (name Footprint) SOT23-6))
+      (pins
+        (pin (num 1) (name "PB0(AIN0/ADC0/OC0A/PCINT0/TPIDATA)") (type BiDi))
+        (pin (num 2) (name GND) (type power_in))
+        (pin (num 3) (name "PB1(AIN1/ADC1/OC0B/ICP0/PCINT1/CLKI/TPICLK)") (type BiDi))
+        (pin (num 4) (name "PB2(INT0/ADC2/T0/PCINT2/CLKO)") (type BiDi))
+        (pin (num 5) (name VCC) (type power_in))
+        (pin (num 6) (name "PB3(~RESET~/ADC3/PCINT3)") (type BiDi))))
+    (libpart (lib bc846a) (part BC846A)
+      (fields
+        (field (name Reference) Q)
+        (field (name Value) BC846A))
+      (pins
+        (pin (num 1) (name B) (type input))
+        (pin (num 2) (name E) (type passive))
+        (pin (num 3) (name C) (type passive))))
+    (libpart (lib logo) (part LOGO)
+      (fields
+        (field (name Reference) LOGO)
+        (field (name Value) LOGO))))
+  (libraries
+    (library (logical device)
+      (uri /usr/share/kicad/library/device.lib))
+    (library (logical logo)
+      (uri ../libs/logo.lib))
+    (library (logical conn)
+      (uri /usr/share/kicad/library/conn.lib))
+    (library (logical atmel)
+      (uri /usr/share/kicad/library/atmel.lib))
+    (library (logical bc846a)
+      (uri ../libs/bc846a.lib)))
+  (nets
+    (net (code 1) (name GND)
+      (node (ref PAD1) (pin 1))
+      (node (ref IC1) (pin 2))
+      (node (ref IC1) (pin 4))
+      (node (ref R1) (pin 1))
+      (node (ref P1) (pin 2))
+      (node (ref Q1) (pin 2))
+      (node (ref C1) (pin 2)))
+    (net (code 2) (name /RST)
+      (node (ref PRST1) (pin 1))
+      (node (ref IC1) (pin 6)))
+    (net (code 3) (name "")
+      (node (ref D3) (pin 2))
+      (node (ref D1) (pin 2))
+      (node (ref D2) (pin 2))
+      (node (ref Q1) (pin 3))
+      (node (ref D4) (pin 2)))
+    (net (code 4) (name VCC)
+      (node (ref D3) (pin 1))
+      (node (ref D2) (pin 1))
+      (node (ref IC1) (pin 5))
+      (node (ref C1) (pin 1))
+      (node (ref D4) (pin 1))
+      (node (ref P1) (pin 1))
+      (node (ref D1) (pin 1)))
+    (net (code 5) (name /LEDOUT)
+      (node (ref IC1) (pin 3))
+      (node (ref Q1) (pin 1)))
+    (net (code 6) (name /SENSE)
+      (node (ref PAD1) (pin 2))
+      (node (ref IC1) (pin 1))
+      (node (ref R1) (pin 2)))))

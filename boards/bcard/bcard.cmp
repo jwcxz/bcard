@@ -1,4 +1,4 @@
-Cmp-Mod V01 Created by CvPCB (2011-07-08)-stable date = Thu 08 Mar 2012 06:59:56 PM EST
+Cmp-Mod V01 Created by CvPcb (2012-03-17 BZR 3466)-stable date = Thu 29 Mar 2012 03:42:45 AM EDT
 
 BeginCmp
 TimeStamp = /4F56F917;
@@ -43,6 +43,20 @@ IdModule  = SOT23_6;
 EndCmp
 
 BeginCmp
+TimeStamp = /4F737976;
+Reference = LOGO1;
+ValeurCmp = NAME;
+IdModule  = LOGO;
+EndCmp
+
+BeginCmp
+TimeStamp = /4F738885;
+Reference = LOGO2;
+ValeurCmp = QRCODE;
+IdModule  = JWCXZ;
+EndCmp
+
+BeginCmp
 TimeStamp = /4F57AA8F;
 Reference = P1;
 ValeurCmp = BATT;
@@ -50,31 +64,17 @@ IdModule  = 2032BATTHOLDER;
 EndCmp
 
 BeginCmp
-TimeStamp = /4F57962B;
-Reference = P2;
-ValeurCmp = CONN_6;
-IdModule  = SIL-6;
-EndCmp
-
-BeginCmp
-TimeStamp = /4F58FB2F;
+TimeStamp = /4F740194;
 Reference = PAD1;
-ValeurCmp = CONN_1;
-IdModule  = PINTST;
+ValeurCmp = CONN_2;
+IdModule  = CAPSENSE;
 EndCmp
 
 BeginCmp
-TimeStamp = /4F58FB7D;
-Reference = PAD2;
+TimeStamp = /4F741158;
+Reference = PRST1;
 ValeurCmp = CONN_1;
-IdModule  = PINTST;
-EndCmp
-
-BeginCmp
-TimeStamp = /4F58FE84;
-Reference = PB3;
-ValeurCmp = CONN_1;
-IdModule  = PINTST;
+IdModule  = PAD;
 EndCmp
 
 BeginCmp
@@ -85,29 +85,8 @@ IdModule  = SOT323;
 EndCmp
 
 BeginCmp
-TimeStamp = /4F57ACE0;
-Reference = R1;
-ValeurCmp = 200;
-IdModule  = SM0603;
-EndCmp
-
-BeginCmp
 TimeStamp = /4F57ACF5;
-Reference = R2;
-ValeurCmp = 1M;
-IdModule  = SM0603;
-EndCmp
-
-BeginCmp
-TimeStamp = /4F58FE3C;
-Reference = R3;
-ValeurCmp = 200;
-IdModule  = SM0603;
-EndCmp
-
-BeginCmp
-TimeStamp = /4F58FB63;
-Reference = R4;
+Reference = R1;
 ValeurCmp = 1M;
 IdModule  = SM0603;
 EndCmp
