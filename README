@@ -1,5 +1,7 @@
 bcard
 
+http://jwcxz.com/projects/bcard
+
 bcard is an experimental attempt to make cheap electronic business card on a
 thin PCB.  The main goals are for it to be:
 
@@ -7,8 +9,26 @@ thin PCB.  The main goals are for it to be:
     - not gaudy
     - not stupid
     
-I originally wanted to make the card a flash drive that would store e.g. my
-resume, but I don't think that's possible, but only because it would cost too
-much.  Instead, I'll try to do that with a QR code pointing to a website.
+As awesome as it would be to make the card appear as a USB flash device that
+contains my resume, that would be a bit too expensive.  One alternative, is
+this design:
 
-IDK, perhaps some kind of cool capacitive thing?
+    http://www.instructables.com/id/USB-PCB-Business-Card/
+    
+But somebody already made it :) Other designs are much more expensive.
+
+    http://mikepuchol.com/my-pcb-business-card/
+    http://electronoblog.allanw.org/2011/08/yet-another-pcb-business-card-with-touchpad/
+    http://www.youtube.com/watch?v=gSN2SAgYy7M
+    http://www.chasingtrons.com/main/tag/business-card
+    
+My design incorporates a capacitive touch sensor with some blue LEDs around the
+corners.  The blue LEDs are actually mounted upside-down so that the card
+fluoresces.
+
+Cost of parts is about $1.80 in quantities of 25 (at Digi-Key prices).  At
+quantities of 100, the cost per board is $1.54.  The majority of the cost is in
+the 4 LEDs and the microcontroller.  You can shave off a few cents by going
+with an ATTiny4 instead of an ATTiny10.
+
+IDK, it's cute.
