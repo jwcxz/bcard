@@ -32,3 +32,9 @@ the 4 LEDs and the microcontroller.  You can shave off a few cents by going
 with an ATTiny4 instead of an ATTiny10.
 
 IDK, it's cute.
+
+Software Used:
+    Board Design: Kicad     http://kicad.sf.net
+                  Inkscape  http://inkscape.org
+    Firwmare:     AVRA      http://avra.sf.net
+                  AVRDUDE   http://www.nongnu.org/avrdude/
