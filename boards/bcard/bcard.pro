@@ -1,4 +1,4 @@
-update=Thu 29 Mar 2012 05:27:11 PM EDT
+update=Sun 22 Apr 2012 12:49:10 AM EDT
 version=1
 last_client=pcbnew
 [cvpcb]
@@ -64,7 +64,7 @@ version=1
 LastNetListRead=bcard.net
 PadDrlX=0
 PadDimH=800
-PadDimV=800
+PadDimV=709
 BoardThickness=630
 TxtPcbV=800
 TxtPcbH=600
@@ -95,3 +95,4 @@ LibName14=pin
 LibName15=sensor
 LibName16=links
 LibName17=wvpads
+LibName18=LED-3mmS
