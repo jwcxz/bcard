@@ -1,4 +1,4 @@
-Cmp-Mod V01 Created by CvPcb (2012-03-17 BZR 3466)-stable date = Sun 22 Apr 2012 12:51:46 AM EDT
+Cmp-Mod V01 Created by CvPcb (2012-03-17 BZR 3466)-stable date = Fri 25 May 2012 11:36:38 AM EDT
 
 BeginCmp
 TimeStamp = /4F56F917;
@@ -64,17 +64,24 @@ IdModule  = 2032BATTHOLDER;
 EndCmp
 
 BeginCmp
-TimeStamp = /4F74D36B;
+TimeStamp = /4FBFA0FD;
 Reference = P2;
-ValeurCmp = CONN_3;
-IdModule  = WVPADS;
+ValeurCmp = CONN_1;
+IdModule  = PAD;
 EndCmp
 
 BeginCmp
-TimeStamp = /4F740194;
+TimeStamp = /4FBF9DE9;
 Reference = PAD1;
-ValeurCmp = CONN_2;
-IdModule  = CAPSENSE;
+ValeurCmp = Csns;
+IdModule  = SIL-2;
+EndCmp
+
+BeginCmp
+TimeStamp = /4FBF9F0C;
+Reference = PAD2;
+ValeurCmp = Csns;
+IdModule  = SIL-2;
 EndCmp
 
 BeginCmp
@@ -87,6 +94,13 @@ EndCmp
 BeginCmp
 TimeStamp = /4F57ACF5;
 Reference = R1;
+ValeurCmp = 1M;
+IdModule  = SM0603;
+EndCmp
+
+BeginCmp
+TimeStamp = /4FBF9F06;
+Reference = R2;
 ValeurCmp = 1M;
 IdModule  = SM0603;
 EndCmp
