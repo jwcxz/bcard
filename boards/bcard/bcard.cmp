@@ -1,4 +1,4 @@
-Cmp-Mod V01 Created by CvPcb (2012-03-17 BZR 3466)-stable date = Fri 25 May 2012 11:36:38 AM EDT
+Cmp-Mod V01 Created by CvPcb (2012-03-17 BZR 3466)-stable date = Mon 28 May 2012 01:58:00 PM EDT
 
 BeginCmp
 TimeStamp = /4F56F917;
@@ -43,6 +43,13 @@ IdModule  = SOT23_6;
 EndCmp
 
 BeginCmp
+TimeStamp = /4FC3BBC8;
+Reference = K1;
+ValeurCmp = CONN_3;
+IdModule  = SENSOR2;
+EndCmp
+
+BeginCmp
 TimeStamp = /4F737976;
 Reference = LOGO1;
 ValeurCmp = NAME;
@@ -68,20 +75,6 @@ TimeStamp = /4FBFA0FD;
 Reference = P2;
 ValeurCmp = CONN_1;
 IdModule  = PAD;
-EndCmp
-
-BeginCmp
-TimeStamp = /4FBF9DE9;
-Reference = PAD1;
-ValeurCmp = Csns;
-IdModule  = SIL-2;
-EndCmp
-
-BeginCmp
-TimeStamp = /4FBF9F0C;
-Reference = PAD2;
-ValeurCmp = Csns;
-IdModule  = SIL-2;
 EndCmp
 
 BeginCmp

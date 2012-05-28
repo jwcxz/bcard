@@ -1,4 +1,4 @@
-EESchema Schematic File Version 2  date Fri 25 May 2012 11:36:53 AM EDT
+EESchema Schematic File Version 2  date Mon 28 May 2012 02:41:33 PM EDT
 LIBS:power
 LIBS:device
 LIBS:transistors
@@ -40,7 +40,7 @@ $Descr USLetter 11000 8500
 encoding utf-8
 Sheet 1 1
 Title "bcard"
-Date "25 may 2012"
+Date "28 may 2012"
 Rev "1.0"
 Comp "J. Colosimo"
 Comment1 ""
@@ -87,13 +87,13 @@ $EndComp
 $Comp
 L R R1
 U 1 1 4F57ACF5
-P 6050 4150
-F 0 "R1" V 6130 4150 50  0000 C CNN
-F 1 "1M" V 6050 4150 50  0000 C CNN
-F 2 "SM0603" V 6150 4150 50  0001 C CNN
-F 4 "RC0603JR-071ML" V 6050 4150 60  0001 C CNN "Part"
-F 5 "http://search.digikey.com/us/en/products/RC0603JR-071ML/311-1.0MGRCT-ND/729625" V 6050 4150 60  0001 C CNN "URL"
-	1    6050 4150
+P 6200 4150
+F 0 "R1" V 6280 4150 50  0000 C CNN
+F 1 "1M" V 6200 4150 50  0000 C CNN
+F 2 "SM0603" V 6300 4150 50  0001 C CNN
+F 4 "RC0603JR-071ML" V 6200 4150 60  0001 C CNN "Part"
+F 5 "http://search.digikey.com/us/en/products/RC0603JR-071ML/311-1.0MGRCT-ND/729625" V 6200 4150 60  0001 C CNN "URL"
+	1    6200 4150
 	1    0    0    -1  
 $EndComp
 $Comp
@@ -218,7 +218,7 @@ F 2 "LOGO" H 4000 4450 60  0001 C CNN
 	1    4000 4300
 	1    0    0    -1  
 $EndComp
-Text Label 6050 3400 0    60   ~ 0
+Text Label 6300 3400 0    60   ~ 0
 SENSE2
 Text Label 7450 3600 0    60   ~ 0
 LEDOUT
@@ -235,56 +235,18 @@ $EndComp
 Text Label 8150 3350 0    60   ~ 0
 LEDDRV
 $Comp
-L C PAD1
-U 1 1 4FBF9DE9
-P 6300 4150
-F 0 "PAD1" H 6350 4250 50  0000 L CNN
-F 1 "Csns" H 6350 4050 50  0000 L CNN
-F 2 "SIL-2" H 6350 4150 50  0001 C CNN
-	1    6300 4150
-	1    0    0    -1  
-$EndComp
-$Comp
-L GND #PWR07
-U 1 1 4FBF9E84
-P 6300 4450
-F 0 "#PWR07" H 6300 4450 30  0001 C CNN
-F 1 "GND" H 6300 4380 30  0001 C CNN
-	1    6300 4450
-	1    0    0    -1  
-$EndComp
-$Comp
 L R R2
 U 1 1 4FBF9F06
-P 6700 4150
-F 0 "R2" V 6780 4150 50  0000 C CNN
-F 1 "1M" V 6700 4150 50  0000 C CNN
-F 2 "SM0603" V 6800 4150 50  0001 C CNN
-F 4 "RC0603JR-071ML" V 6700 4150 60  0001 C CNN "Part"
-F 5 "http://search.digikey.com/us/en/products/RC0603JR-071ML/311-1.0MGRCT-ND/729625" V 6700 4150 60  0001 C CNN "URL"
-	1    6700 4150
+P 6850 4150
+F 0 "R2" V 6930 4150 50  0000 C CNN
+F 1 "1M" V 6850 4150 50  0000 C CNN
+F 2 "SM0603" V 6950 4150 50  0001 C CNN
+F 4 "RC0603JR-071ML" V 6850 4150 60  0001 C CNN "Part"
+F 5 "http://search.digikey.com/us/en/products/RC0603JR-071ML/311-1.0MGRCT-ND/729625" V 6850 4150 60  0001 C CNN "URL"
+	1    6850 4150
 	1    0    0    -1  
 $EndComp
-$Comp
-L C PAD2
-U 1 1 4FBF9F0C
-P 6950 4150
-F 0 "PAD2" H 7000 4250 50  0000 L CNN
-F 1 "Csns" H 7000 4050 50  0000 L CNN
-F 2 "SIL-2" H 7000 4150 50  0001 C CNN
-	1    6950 4150
-	1    0    0    -1  
-$EndComp
-$Comp
-L GND #PWR08
-U 1 1 4FBF9F12
-P 6950 4450
-F 0 "#PWR08" H 6950 4450 30  0001 C CNN
-F 1 "GND" H 6950 4380 30  0001 C CNN
-	1    6950 4450
-	1    0    0    -1  
-$EndComp
-Text Label 6700 3700 0    60   ~ 0
+Text Label 6650 3700 0    60   ~ 0
 SENSE1
 $Comp
 L CONN_1 P2
@@ -294,6 +256,27 @@ F 0 "P2" H 6100 3450 40  0000 L CNN
 F 1 "CONN_1" H 6200 3555 30  0001 C CNN
 F 2 "PAD" H 6200 3655 30  0001 C CNN
 	1    6200 3500
+	1    0    0    -1  
+$EndComp
+Text Label 6000 3500 0    60   ~ 0
+CLK
+$Comp
+L CONN_3 K1
+U 1 1 4FC3BBC8
+P 6550 4300
+F 0 "K1" V 6500 4300 50  0000 C CNN
+F 1 "CONN_3" V 6600 4300 40  0000 C CNN
+F 2 "SENSOR2" V 6700 4300 40  0001 C CNN
+	1    6550 4300
+	0    1    1    0   
+$EndComp
+$Comp
+L GND #PWR07
+U 1 1 4FC3BCB2
+P 6700 4500
+F 0 "#PWR07" H 6700 4500 30  0001 C CNN
+F 1 "GND" H 6700 4430 30  0001 C CNN
+	1    6700 4500
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
@@ -335,33 +318,33 @@ Wire Wire Line
 Wire Wire Line
 	6000 3600 7850 3600
 Wire Wire Line
-	6050 3900 6300 3900
+	6200 3900 6550 3900
 Wire Wire Line
-	6300 3950 6300 3400
+	6550 3950 6550 3400
 Wire Wire Line
-	6300 4350 6300 4450
+	6850 3900 6650 3900
 Wire Wire Line
-	6300 4400 6050 4400
-Connection ~ 6300 4400
-Connection ~ 6300 4400
+	6650 3950 6650 3700
 Wire Wire Line
-	6700 3900 6950 3900
+	6550 3400 6000 3400
+Connection ~ 6550 3900
 Wire Wire Line
-	6950 3950 6950 3700
-Wire Wire Line
-	6950 4350 6950 4450
-Wire Wire Line
-	6950 4400 6700 4400
-Connection ~ 6950 4400
-Connection ~ 6950 4400
-Wire Wire Line
-	6300 3400 6000 3400
-Connection ~ 6300 3900
-Wire Wire Line
-	6950 3700 6000 3700
-Connection ~ 6950 3900
+	6650 3700 6000 3700
+Connection ~ 6650 3900
 Wire Wire Line
 	6000 3500 6050 3500
-Text Label 6000 3500 0    60   ~ 0
-CLK
+Wire Wire Line
+	6850 4450 6850 4400
+Wire Wire Line
+	6850 4450 6200 4450
+Wire Wire Line
+	6700 4450 6700 4500
+Wire Wire Line
+	6200 4450 6200 4400
+Connection ~ 6700 4450
+Wire Wire Line
+	6450 3950 6350 3950
+Wire Wire Line
+	6350 3950 6350 4450
+Connection ~ 6350 4450
 $EndSCHEMATC
