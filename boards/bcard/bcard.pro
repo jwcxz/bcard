@@ -1,4 +1,4 @@
-update=Mon 28 May 2012 01:41:14 PM EDT
+update=Tue 29 May 2012 11:00:59 PM EDT
 version=1
 last_client=pcbnew
 [cvpcb]
@@ -63,8 +63,8 @@ LibName34=logo
 version=1
 LastNetListRead=bcard.net
 PadDrlX=0
-PadDimH=0
-PadDimV=0
+PadDimH=591
+PadDimV=591
 BoardThickness=630
 TxtPcbV=800
 TxtPcbH=600
@@ -97,3 +97,4 @@ LibName16=links
 LibName17=wvpads
 LibName18=LED-3mmS
 LibName19=sensor2
+LibName20=1208vert

@@ -1,4 +1,4 @@
-EESchema Schematic File Version 2  date Mon 28 May 2012 02:41:33 PM EDT
+EESchema Schematic File Version 2  date Wed 30 May 2012 06:04:41 AM EDT
 LIBS:power
 LIBS:device
 LIBS:transistors
@@ -40,8 +40,8 @@ $Descr USLetter 11000 8500
 encoding utf-8
 Sheet 1 1
 Title "bcard"
-Date "28 may 2012"
-Rev "1.0"
+Date ""
+Rev "1.2"
 Comp "J. Colosimo"
 Comment1 ""
 Comment2 ""
@@ -54,9 +54,9 @@ U 1 1 4F5860C5
 P 8600 3050
 F 0 "D4" H 8600 3150 50  0000 C CNN
 F 1 "LED" H 8600 2950 50  0000 C CNN
-F 2 "LED-3mmS" H 8600 3050 50  0001 C CNN
+F 2 "1208vert" H 8600 3050 50  0001 C CNN
 F 4 "APT3216QBC/D" H 8600 3050 60  0001 C CNN "Part"
-F 5 "http://search.digikey.com/us/en/products/APT3216QBC%2FD/754-1439-1-ND/2163797" H 8600 3050 60  0001 C CNN "URL"
+F 5 "http://www.digikey.com/product-detail/en/APA3010QBC%2FD-GX/754-1582-1-ND/2757973" H 8600 3050 60  0001 C CNN "URL"
 	1    8600 3050
 	0    1    1    0   
 $EndComp
@@ -66,9 +66,9 @@ U 1 1 4F5860C2
 P 8300 3050
 F 0 "D3" H 8300 3150 50  0000 C CNN
 F 1 "LED" H 8300 2950 50  0000 C CNN
-F 2 "LED-3mmS" H 8300 3050 50  0001 C CNN
+F 2 "1208vert" H 8300 3050 50  0001 C CNN
 F 4 "APT3216QBC/D" H 8300 3050 60  0001 C CNN "Part"
-F 5 "http://search.digikey.com/us/en/products/APT3216QBC%2FD/754-1439-1-ND/2163797" H 8300 3050 60  0001 C CNN "URL"
+F 5 "http://www.digikey.com/product-detail/en/APA3010QBC%2FD-GX/754-1582-1-ND/2757973" H 8300 3050 60  0001 C CNN "URL"
 	1    8300 3050
 	0    1    1    0   
 $EndComp
@@ -78,9 +78,9 @@ U 1 1 4F5860BF
 P 8000 3050
 F 0 "D2" H 8000 3150 50  0000 C CNN
 F 1 "LED" H 8000 2950 50  0000 C CNN
-F 2 "LED-3mmS" H 8000 3050 50  0001 C CNN
+F 2 "1208vert" H 8000 3050 50  0001 C CNN
 F 4 "APT3216QBC/D" H 8000 3050 60  0001 C CNN "Part"
-F 5 "http://search.digikey.com/us/en/products/APT3216QBC%2FD/754-1439-1-ND/2163797" H 8000 3050 60  0001 C CNN "URL"
+F 5 "http://www.digikey.com/product-detail/en/APA3010QBC%2FD-GX/754-1582-1-ND/2757973" H 8000 3050 60  0001 C CNN "URL"
 	1    8000 3050
 	0    1    1    0   
 $EndComp
@@ -121,6 +121,8 @@ P 2650 3550
 F 0 "P1" V 2600 3550 40  0000 C CNN
 F 1 "BATT" V 2700 3550 40  0000 C CNN
 F 2 "2032BATTHOLDER" V 2800 3550 40  0001 C CNN
+F 4 "BK-912" V 2650 3550 60  0001 C CNN "Part"
+F 5 "http://www.digikey.com/product-detail/en/BK-912/BK-912-ND/2647825" V 2650 3550 60  0001 C CNN "URL"
 	1    2650 3550
 	-1   0    0    -1  
 $EndComp
@@ -148,9 +150,9 @@ U 1 1 4F57A951
 P 7700 3050
 F 0 "D1" H 7700 3150 50  0000 C CNN
 F 1 "LED" H 7700 2950 50  0000 C CNN
-F 2 "LED-3mmS" H 7700 3050 50  0001 C CNN
+F 2 "1208vert" H 7700 3050 50  0001 C CNN
 F 4 "APT3216QBC/D" H 7700 3050 60  0001 C CNN "Part"
-F 5 "http://search.digikey.com/us/en/products/APT3216QBC%2FD/754-1439-1-ND/2163797" H 7700 3050 60  0001 C CNN "URL"
+F 5 "http://www.digikey.com/product-detail/en/APA3010QBC%2FD-GX/754-1582-1-ND/2757973" H 7700 3050 60  0001 C CNN "URL"
 	1    7700 3050
 	0    1    1    0   
 $EndComp
