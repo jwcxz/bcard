@@ -1,4 +1,4 @@
-EESchema Schematic File Version 2  date Wed 30 May 2012 06:04:41 AM EDT
+EESchema Schematic File Version 2  date Sun 10 Jun 2012 08:16:07 AM EDT
 LIBS:power
 LIBS:device
 LIBS:transistors
@@ -41,7 +41,7 @@ encoding utf-8
 Sheet 1 1
 Title "bcard"
 Date ""
-Rev "1.2"
+Rev "1.3"
 Comp "J. Colosimo"
 Comment1 ""
 Comment2 ""

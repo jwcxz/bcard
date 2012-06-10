@@ -1,7 +1,0 @@
-QTY Thing   URL
-25  cap     http://search.digikey.com/us/en/products/GRM21BR60J106KE19L/490-1717-1-ND/587426
-100 led     http://search.digikey.com/us/en/products/APT3216QBC%2FD/754-1439-1-ND/2163797
-25  attiny  http://search.digikey.com/us/en/products/ATTINY10-TSHR/ATTINY10-TSHRCT-ND/2136158
-25  bjt     http://search.digikey.com/us/en/products/BC846A,215/568-4866-1-ND/2122195
-100 res200  http://search.digikey.com/us/en/products/RC0603FR-07200RL/311-200HRCT-ND/729990
-100 res1M   http://search.digikey.com/us/en/products/RC0603JR-071ML/311-1.0MGRCT-ND/729625
