@@ -1,0 +1,8 @@
+comp = "C1" module = "SM0805"
+comp = "IC1" module = "SOT23_6"
+comp = "P1" module = "PIN"
+comp = "P2" module = "PIN"
+comp = "P3" module = "PIN"
+comp = "P4" module = "PIN"
+comp = "P5" module = "PIN"
+comp = "P6" module = "PIN"

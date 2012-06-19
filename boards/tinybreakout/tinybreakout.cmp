@@ -1,0 +1,59 @@
+Cmp-Mod V01 Created by CvPcb (2012-03-17 BZR 3466)-stable date = Mon 18 Jun 2012 09:24:49 PM EDT
+
+BeginCmp
+TimeStamp = /4FDFD44E;
+Reference = C1;
+ValeurCmp = C;
+IdModule  = SM0805;
+EndCmp
+
+BeginCmp
+TimeStamp = /4FDFD3EF;
+Reference = IC1;
+ValeurCmp = ATTINY10-TS;
+IdModule  = SOT23_6;
+EndCmp
+
+BeginCmp
+TimeStamp = /4FDFD47D;
+Reference = P1;
+ValeurCmp = CONN_1;
+IdModule  = PIN;
+EndCmp
+
+BeginCmp
+TimeStamp = /4FDFD41F;
+Reference = P2;
+ValeurCmp = CONN_1;
+IdModule  = PIN;
+EndCmp
+
+BeginCmp
+TimeStamp = /4FDFD4BE;
+Reference = P3;
+ValeurCmp = CONN_1;
+IdModule  = PIN;
+EndCmp
+
+BeginCmp
+TimeStamp = /4FDFD4C5;
+Reference = P4;
+ValeurCmp = CONN_1;
+IdModule  = PIN;
+EndCmp
+
+BeginCmp
+TimeStamp = /4FDFD412;
+Reference = P5;
+ValeurCmp = CONN_1;
+IdModule  = PIN;
+EndCmp
+
+BeginCmp
+TimeStamp = /4FDFD4CC;
+Reference = P6;
+ValeurCmp = CONN_1;
+IdModule  = PIN;
+EndCmp
+
+EndListe
