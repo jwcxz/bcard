@@ -1,0 +1,5 @@
+comp = "K1" module = "SENSOR2"
+comp = "P1" module = "PIN"
+comp = "P2" module = "PIN"
+comp = "R1" module = "SM0603"
+comp = "R2" module = "SM0603"

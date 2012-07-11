@@ -1,0 +1,59 @@
+# EESchema Netlist Version 1.1 created  Tue 10 Jul 2012 08:42:52 PM EDT
+(
+ ( /4FFCCB3A SENSOR2  K1 CONN_3 {Lib=CONN_3}
+  (    1 N-000002 )
+  (    2 N-000001 )
+  (    3 GND )
+ )
+ ( /4FFCCB58 SM0603  R1 R {Lib=R}
+  (    1 N-000002 )
+  (    2 GND )
+ )
+ ( /4FFCCB67 SM0603  R2 R {Lib=R}
+  (    1 N-000001 )
+  (    2 GND )
+ )
+ ( /4FFCCBB7 PIN  P1 CONN_1 {Lib=CONN_1}
+  (    1 N-000002 )
+ )
+ ( /4FFCCBC4 PIN  P2 CONN_1 {Lib=CONN_1}
+  (    1 N-000001 )
+ )
+ ( /4FFCCC7A PIN  P3 CONN_1 {Lib=CONN_1}
+  (    1 GND )
+ )
+)
+*
+{ Allowed footprints by component:
+$component R1
+ R?
+ SM0603
+ SM0805
+ R?-*
+ SM1206
+$endlist
+$component R2
+ R?
+ SM0603
+ SM0805
+ R?-*
+ SM1206
+$endlist
+$endfootprintlist
+}
+{ Pin List by Nets
+Net 1 "" ""
+ K1 2
+ R2 1
+ P2 1
+Net 2 "" ""
+ R1 1
+ P1 1
+ K1 1
+Net 3 "GND" "GND"
+ K1 3
+ R1 2
+ R2 2
+ P3 1
+}
+#End

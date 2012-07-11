@@ -1,0 +1,154 @@
+EESchema Schematic File Version 2  date Tue 10 Jul 2012 08:42:48 PM EDT
+LIBS:power
+LIBS:device
+LIBS:transistors
+LIBS:conn
+LIBS:linear
+LIBS:regul
+LIBS:74xx
+LIBS:cmos4000
+LIBS:adc-dac
+LIBS:memory
+LIBS:xilinx
+LIBS:special
+LIBS:microcontrollers
+LIBS:dsp
+LIBS:microchip
+LIBS:analog_switches
+LIBS:motorola
+LIBS:texas
+LIBS:intel
+LIBS:audio
+LIBS:interface
+LIBS:digital-audio
+LIBS:philips
+LIBS:display
+LIBS:cypress
+LIBS:siliconi
+LIBS:opto
+LIBS:atmel
+LIBS:contrib
+LIBS:valves
+LIBS:at42qt1012
+LIBS:atmel2
+LIBS:bc846a
+LIBS:diy_connectors
+LIBS:logo
+LIBS:monomeArduino
+LIBS:sn75176b
+LIBS:SparkFun
+LIBS:SparkFun_old
+LIBS:usb-a-plug
+LIBS:xo-14s
+EELAYER 43  0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 1
+Title ""
+Date "11 jul 2012"
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L CONN_3 K1
+U 1 1 4FFCCB3A
+P 5500 3400
+F 0 "K1" V 5450 3400 50  0000 C CNN
+F 1 "CONN_3" V 5550 3400 40  0000 C CNN
+F 2 "SENSOR2" V 5650 3400 40  0001 C CNN
+	1    5500 3400
+	0    1    1    0   
+$EndComp
+$Comp
+L GND #PWR01
+U 1 1 4FFCCB49
+P 5150 3650
+F 0 "#PWR01" H 5150 3650 30  0001 C CNN
+F 1 "GND" H 5150 3580 30  0001 C CNN
+	1    5150 3650
+	1    0    0    -1  
+$EndComp
+$Comp
+L R R1
+U 1 1 4FFCCB58
+P 4800 3000
+F 0 "R1" V 4880 3000 50  0000 C CNN
+F 1 "R" V 4800 3000 50  0000 C CNN
+F 2 "SM0603" V 4900 3000 50  0001 C CNN
+	1    4800 3000
+	1    0    0    -1  
+$EndComp
+$Comp
+L R R2
+U 1 1 4FFCCB67
+P 5000 3000
+F 0 "R2" V 5080 3000 50  0000 C CNN
+F 1 "R" V 5000 3000 50  0000 C CNN
+F 2 "SM0603" V 5100 3000 50  0001 C CNN
+	1    5000 3000
+	1    0    0    -1  
+$EndComp
+$Comp
+L CONN_1 P1
+U 1 1 4FFCCBB7
+P 5950 2650
+F 0 "P1" H 6030 2650 40  0000 L CNN
+F 1 "CONN_1" H 5950 2705 30  0001 C CNN
+F 2 "PIN" H 5950 2805 30  0001 C CNN
+	1    5950 2650
+	1    0    0    -1  
+$EndComp
+$Comp
+L CONN_1 P2
+U 1 1 4FFCCBC4
+P 5950 2750
+F 0 "P2" H 6030 2750 40  0000 L CNN
+F 1 "CONN_1" H 5950 2805 30  0001 C CNN
+F 2 "PIN" H 5950 2905 30  0001 C CNN
+	1    5950 2750
+	1    0    0    -1  
+$EndComp
+$Comp
+L CONN_1 P3
+U 1 1 4FFCCC7A
+P 4900 3500
+F 0 "P3" H 4980 3500 40  0000 L CNN
+F 1 "CONN_1" H 4900 3555 30  0001 C CNN
+F 2 "PIN" H 4900 3655 30  0001 C CNN
+	1    4900 3500
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	5000 2750 5800 2750
+Wire Wire Line
+	5500 2750 5500 3050
+Wire Wire Line
+	4800 2750 4800 2650
+Wire Wire Line
+	4800 2650 5800 2650
+Wire Wire Line
+	5600 2650 5600 3050
+Wire Wire Line
+	5400 3050 5150 3050
+Wire Wire Line
+	5150 3050 5150 3650
+Wire Wire Line
+	5000 3250 5150 3250
+Connection ~ 5150 3250
+Wire Wire Line
+	4800 3250 4800 3350
+Wire Wire Line
+	4800 3350 5150 3350
+Connection ~ 5150 3350
+Connection ~ 5600 2650
+Connection ~ 5600 2650
+Connection ~ 5500 2750
+Wire Wire Line
+	5050 3500 5150 3500
+Connection ~ 5150 3500
+$EndSCHEMATC

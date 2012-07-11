@@ -1,0 +1,38 @@
+Cmp-Mod V01 Created by CvPcb (2012-03-17 BZR 3466)-stable date = Tue 10 Jul 2012 08:42:07 PM EDT
+
+BeginCmp
+TimeStamp = /4FFCCB3A;
+Reference = K1;
+ValeurCmp = CONN_3;
+IdModule  = SENSOR2;
+EndCmp
+
+BeginCmp
+TimeStamp = /4FFCCBB7;
+Reference = P1;
+ValeurCmp = CONN_1;
+IdModule  = PIN;
+EndCmp
+
+BeginCmp
+TimeStamp = /4FFCCBC4;
+Reference = P2;
+ValeurCmp = CONN_1;
+IdModule  = PIN;
+EndCmp
+
+BeginCmp
+TimeStamp = /4FFCCB58;
+Reference = R1;
+ValeurCmp = R;
+IdModule  = SM0603;
+EndCmp
+
+BeginCmp
+TimeStamp = /4FFCCB67;
+Reference = R2;
+ValeurCmp = R;
+IdModule  = SM0603;
+EndCmp
+
+EndListe
