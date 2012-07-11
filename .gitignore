@@ -4,3 +4,4 @@
 *.lst
 *.map
 *.obj
+*.o
