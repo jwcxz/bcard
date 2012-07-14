@@ -9,27 +9,102 @@
 
 #include "uart.h"
 
-int main(void) {
-    uint8_t i = 0;
+#define THRESH 5
+#define PINONDELAY 1
 
-    uint16_t counter = 0;
+uint8_t sense(uint8_t pin) {
+    uint8_t counter = 0;
+    uint8_t othr;
+
+    DDRB  |= (1<<pin);
+    PORTB |= (1<<pin);
+    _delay_ms(PINONDELAY);
+    DDRB  &= ~(1<<pin);
+    PORTB &= ~(1<<pin);
+
+    while ( PINB&(1<<pin) && counter <= 255 ) {
+        counter++;
+        /*
+        if (othr) { 
+            counter++;
+            othr = 0;
+        } else {
+            othr = 1;
+        }
+        */
+    }
+
+    return counter;
+}
+
+int main(void) {
+    // this code is written like it should be written in assembly so that's why
+    // it sucks...
+
+    uint8_t i = 0;
+    uint8_t swipe = 0;
+    uint8_t othr = 0;
+
+    uint16_t prevl = 0;
+    uint16_t prevr = 0;
+    uint8_t counter = 0;
 
     // initialize UART
-    uart_init();
+    //uart_init();
+    
+    DDRD |= (1<<7);
+    uint8_t led = 0;
+
+    // adjust clock prescale
+    //CLKPR = _BV(CLKPCE);
+    //CLKPR = 0;
+
+    // training phase (set prev)
+    for ( i=0 ; i<10 ; i++ ) {
+
+        counter = sense(PB0);
+        prevl = (prevl >> 1) + (counter >> 1);
+
+        counter = sense(PB1);
+        prevr = (prevl >> 1) + (counter >> 1);
+    }
 
     while (1) {
+        counter = sense(PB0);
+        //uart_tx_hex(counter);
+        //uart_tx(' ');
 
-        counter = 0;
+        if ( counter > prevl + THRESH ) {
+            // hit!
+            
+            _delay_ms(100);
 
-        DDRB |= 1;
-        PORTB |= 1;
-        _delay_ms(5);
-        DDRB &= ~1;
-        PORTB &= ~1;
+            counter = sense(PB1);
+            //uart_tx_hex(counter);
+            //uart_tx(' ');
 
-        while ( PINB&1 && counter < 16000 ) {
-            counter++;
+            if ( counter > prevr + THRESH ) {
+                // hit!
+                if (led) {
+                    led = 0;
+                    PORTD &= ~(1<<7);
+                } else {
+                    led = 1;
+                    PORTD |= 1<<7;
+                }
+                
+                // start PWM system
+            } else {
+                //prevr = (prevr >> 1) + (counter >> 1);
+            }
+
+            _delay_ms(10);
+
+        } else {
+            //prevl = (prevl >> 1) + (counter >> 1);
         }
+
+        _delay_ms(100);
 
         /*
         uart_tx_hex((uint8_t) (counter >> 8));
@@ -37,11 +112,21 @@ int main(void) {
         uart_tx(' ');
         */
 
+        /*
         uart_tx(':');
         uart_tx( (uint8_t)( counter >> 8 ) );
         uart_tx( (uint8_t)( counter & 0xFF ) );
+        */
 
-        _delay_ms(45);
+
+        /*
+        if ( counter > prev + THRESH ) {
+            uart_tx('1');
+        } else {
+            prev = (prev >> 1) + (counter >> 1);
+            uart_tx('0');
+        }
+        */
 
     }
 

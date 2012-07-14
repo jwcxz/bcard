@@ -66,7 +66,7 @@
 # Name of target controller 
 # (e.g. 'at90s8515', see the available avr-gcc mmcu 
 # options for possible values)
-MCU=atmega168p
+MCU=atmega168
 
 # id to use with programmer
 # default: PROGRAMMER_MCU=$(MCU)
@@ -74,9 +74,9 @@ MCU=atmega168p
 # accept the same MCU name as avr-gcc (for example
 # for ATmega8s, avr-gcc expects 'atmega8' and 
 # avrdude requires 'm8')
-PROGRAMMER_MCU=m168p
+PROGRAMMER_MCU=m168
 
-AVR_LFUSE=0xff
+AVR_LFUSE=0xe2
 AVR_HFUSE=0xd7
 AVR_EFUSE=0xf9
 
@@ -239,7 +239,7 @@ writeflash: hex
 install: writeflash
 
 writefuse:
-	echo $(AVRDUDE) -c $(AVRDUDE_PROGRAMMERID) \
+	$(AVRDUDE) -c $(AVRDUDE_PROGRAMMERID) \
 		-p $(PROGRAMMER_MCU) -P $(AVRDUDE_PORT) -e  \
 		-U hfuse:w:$(AVR_HFUSE):m \
         -U lfuse:w:$(AVR_LFUSE):m \
