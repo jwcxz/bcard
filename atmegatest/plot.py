@@ -45,7 +45,7 @@ import pylab
 class DataGen(object):
     def __init__(self, init=0):
         self.data = self.init = init
-        self.cxn = serial.Serial("/dev/ttyUSB0", 230400);
+        self.cxn = serial.Serial("/dev/ttyUSB0", 38400);
         _ = '';
         while _ != ':':
             _ = self.cxn.read(1);
@@ -142,7 +142,7 @@ class GraphFrame(wx.Frame):
         
         self.redraw_timer = wx.Timer(self)
         self.Bind(wx.EVT_TIMER, self.on_redraw_timer, self.redraw_timer)        
-        self.redraw_timer.Start(50);
+        self.redraw_timer.Start(100);
 
     def create_menu(self):
         self.menubar = wx.MenuBar()

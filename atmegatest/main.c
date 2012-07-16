@@ -9,7 +9,8 @@
 
 #include "uart.h"
 
-#define THRESH 5
+#define THRESH 20
+#define TFACTOR 4
 #define PINONDELAY 1
 
 uint8_t sense(uint8_t pin) {
@@ -24,14 +25,6 @@ uint8_t sense(uint8_t pin) {
 
     while ( PINB&(1<<pin) && counter <= 255 ) {
         counter++;
-        /*
-        if (othr) { 
-            counter++;
-            othr = 0;
-        } else {
-            othr = 1;
-        }
-        */
     }
 
     return counter;
@@ -43,30 +36,34 @@ int main(void) {
 
     uint8_t i = 0;
     uint8_t swipe = 0;
-    uint8_t othr = 0;
 
-    uint16_t prevl = 0;
-    uint16_t prevr = 0;
+    uint8_t threshl = THRESH;
+    uint8_t threshr = THRESH;
+
+    uint8_t prevl = 0;
+    uint8_t prevr = 0;
+
     uint8_t counter = 0;
 
     // initialize UART
-    //uart_init();
+    uart_init();
     
     DDRD |= (1<<7);
-    uint8_t led = 0;
 
     // adjust clock prescale
     //CLKPR = _BV(CLKPCE);
     //CLKPR = 0;
 
     // training phase (set prev)
+    prevl = sense(PB0);
+    prevr = sense(PB1);
     for ( i=0 ; i<10 ; i++ ) {
 
         counter = sense(PB0);
-        prevl = (prevl >> 1) + (counter >> 1);
+        prevl = 7*(prevl >> 3) + (counter >> 3);
 
         counter = sense(PB1);
-        prevr = (prevl >> 1) + (counter >> 1);
+        prevr = 7*(prevr >> 3) + (counter >> 3);
     }
 
     while (1) {
@@ -74,8 +71,11 @@ int main(void) {
         //uart_tx_hex(counter);
         //uart_tx(' ');
 
-        if ( counter > prevl + THRESH ) {
+        if ( counter > prevl + threshl ) {
             // hit!
+
+            // update threshl
+            threshl = 7*(threshl >> 3) + ( ((counter-prevl)/TFACTOR) >> 3 );
             
             _delay_ms(100);
 
@@ -83,50 +83,35 @@ int main(void) {
             //uart_tx_hex(counter);
             //uart_tx(' ');
 
-            if ( counter > prevr + THRESH ) {
+            if ( counter > prevr + threshr ) {
                 // hit!
-                if (led) {
-                    led = 0;
-                    PORTD &= ~(1<<7);
-                } else {
-                    led = 1;
-                    PORTD |= 1<<7;
-                }
+
+                // update threshr
+                threshr = 7*(threshr >> 3) + ( ((counter-prevl)/TFACTOR) >> 3 );
+
+                PIND |= 1<<7;    // toggle pin
                 
                 // start PWM system
             } else {
-                //prevr = (prevr >> 1) + (counter >> 1);
+                //prevr = 7*(prevr >> 3) + (counter >> 3);
             }
 
             _delay_ms(10);
 
         } else {
-            //prevl = (prevl >> 1) + (counter >> 1);
+            prevl = 7*(prevl >> 3) + (counter >> 3);
         }
 
-        _delay_ms(100);
+        _delay_ms(20);
 
-        /*
-        uart_tx_hex((uint8_t) (counter >> 8));
-        uart_tx_hex((uint8_t) (counter & 0xFF));
+        uart_tx_hex(prevl);
         uart_tx(' ');
-        */
-
-        /*
-        uart_tx(':');
-        uart_tx( (uint8_t)( counter >> 8 ) );
-        uart_tx( (uint8_t)( counter & 0xFF ) );
-        */
-
-
-        /*
-        if ( counter > prev + THRESH ) {
-            uart_tx('1');
-        } else {
-            prev = (prev >> 1) + (counter >> 1);
-            uart_tx('0');
-        }
-        */
+        uart_tx_hex(prevr);
+        uart_tx(' ');
+        uart_tx_hex(threshl);
+        uart_tx(' ');
+        uart_tx_hex(threshr);
+        uart_tx('\n');
 
     }
 
