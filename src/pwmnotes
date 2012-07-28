@@ -1,0 +1,8 @@
+oh shit this is important:
+
+A frequency (with 50% duty cycle) waveform output in fast PWM mode can be
+achieved by set- ting OC0A to toggle its logical level on each compare match
+(COM0A1:0 = 1). The waveform generated will have a maximum frequency of
+f = f /2 when OCR0A is set to zero (0x0000).  0A clk_I/OThis feature is
+similar to the OC0A toggle in CTC mode, except the double buffer feature of
+the Output Compare unit is enabled in the fast PWM mode.
