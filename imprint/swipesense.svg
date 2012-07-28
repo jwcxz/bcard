@@ -1,0 +1,649 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="315"
+   height="180"
+   id="svg3244"
+   version="1.1"
+   inkscape:version="0.48.3.1 r9886"
+   sodipodi:docname="swipesense.svg"
+   inkscape:export-filename="/home/j/projects/bcard/imprint/swipesense.png"
+   inkscape:export-xdpi="300"
+   inkscape:export-ydpi="300">
+  <defs
+     id="defs3246">
+    <filter
+       id="filter7595"
+       inkscape:label="Invert"
+       x="0"
+       y="0"
+       width="1"
+       height="1"
+       inkscape:menu="Color"
+       inkscape:menu-tooltip="Invert colors"
+       color-interpolation-filters="sRGB">
+      <feColorMatrix
+         id="feColorMatrix7597"
+         type="saturate"
+         values="1"
+         result="fbSourceGraphic" />
+      <feColorMatrix
+         id="feColorMatrix7599"
+         in="fbSourceGraphic"
+         values="-1 0 0 0 1 0 -1 0 0 1 0 0 -1 0 1 0 0 0 1 0 " />
+    </filter>
+    <filter
+       id="filter7601"
+       inkscape:label="Invert"
+       x="0"
+       y="0"
+       width="1"
+       height="1"
+       inkscape:menu="Color"
+       inkscape:menu-tooltip="Invert colors"
+       color-interpolation-filters="sRGB">
+      <feColorMatrix
+         id="feColorMatrix7603"
+         type="saturate"
+         values="1"
+         result="fbSourceGraphic" />
+      <feColorMatrix
+         id="feColorMatrix7605"
+         in="fbSourceGraphic"
+         values="-1 0 0 0 1 0 -1 0 0 1 0 0 -1 0 1 0 0 0 1 0 " />
+    </filter>
+    <filter
+       id="filter7607"
+       inkscape:label="Invert"
+       x="0"
+       y="0"
+       width="1"
+       height="1"
+       inkscape:menu="Color"
+       inkscape:menu-tooltip="Invert colors"
+       color-interpolation-filters="sRGB">
+      <feColorMatrix
+         id="feColorMatrix7609"
+         type="saturate"
+         values="1"
+         result="fbSourceGraphic" />
+      <feColorMatrix
+         id="feColorMatrix7611"
+         in="fbSourceGraphic"
+         values="-1 0 0 0 1 0 -1 0 0 1 0 0 -1 0 1 0 0 0 1 0 " />
+    </filter>
+    <filter
+       id="filter7613"
+       inkscape:label="Invert"
+       x="0"
+       y="0"
+       width="1"
+       height="1"
+       inkscape:menu="Color"
+       inkscape:menu-tooltip="Invert colors"
+       color-interpolation-filters="sRGB">
+      <feColorMatrix
+         id="feColorMatrix7615"
+         type="saturate"
+         values="1"
+         result="fbSourceGraphic" />
+      <feColorMatrix
+         id="feColorMatrix7617"
+         in="fbSourceGraphic"
+         values="-1 0 0 0 1 0 -1 0 0 1 0 0 -1 0 1 0 0 0 1 0 " />
+    </filter>
+    <filter
+       id="filter7619"
+       inkscape:label="Invert"
+       x="0"
+       y="0"
+       width="1"
+       height="1"
+       inkscape:menu="Color"
+       inkscape:menu-tooltip="Invert colors"
+       color-interpolation-filters="sRGB">
+      <feColorMatrix
+         id="feColorMatrix7621"
+         type="saturate"
+         values="1"
+         result="fbSourceGraphic" />
+      <feColorMatrix
+         id="feColorMatrix7623"
+         in="fbSourceGraphic"
+         values="-1 0 0 0 1 0 -1 0 0 1 0 0 -1 0 1 0 0 0 1 0 " />
+    </filter>
+    <filter
+       id="filter7625"
+       inkscape:label="Invert"
+       x="0"
+       y="0"
+       width="1"
+       height="1"
+       inkscape:menu="Color"
+       inkscape:menu-tooltip="Invert colors"
+       color-interpolation-filters="sRGB">
+      <feColorMatrix
+         id="feColorMatrix7627"
+         type="saturate"
+         values="1"
+         result="fbSourceGraphic" />
+      <feColorMatrix
+         id="feColorMatrix7629"
+         in="fbSourceGraphic"
+         values="-1 0 0 0 1 0 -1 0 0 1 0 0 -1 0 1 0 0 0 1 0 " />
+    </filter>
+    <filter
+       id="filter7631"
+       inkscape:label="Invert"
+       x="0"
+       y="0"
+       width="1"
+       height="1"
+       inkscape:menu="Color"
+       inkscape:menu-tooltip="Invert colors"
+       color-interpolation-filters="sRGB">
+      <feColorMatrix
+         id="feColorMatrix7633"
+         type="saturate"
+         values="1"
+         result="fbSourceGraphic" />
+      <feColorMatrix
+         id="feColorMatrix7635"
+         in="fbSourceGraphic"
+         values="-1 0 0 0 1 0 -1 0 0 1 0 0 -1 0 1 0 0 0 1 0 " />
+    </filter>
+    <filter
+       id="filter7637"
+       inkscape:label="Invert"
+       x="0"
+       y="0"
+       width="1"
+       height="1"
+       inkscape:menu="Color"
+       inkscape:menu-tooltip="Invert colors"
+       color-interpolation-filters="sRGB">
+      <feColorMatrix
+         id="feColorMatrix7639"
+         type="saturate"
+         values="1"
+         result="fbSourceGraphic" />
+      <feColorMatrix
+         id="feColorMatrix7641"
+         in="fbSourceGraphic"
+         values="-1 0 0 0 1 0 -1 0 0 1 0 0 -1 0 1 0 0 0 1 0 " />
+    </filter>
+    <filter
+       id="filter7643"
+       inkscape:label="Invert"
+       x="0"
+       y="0"
+       width="1"
+       height="1"
+       inkscape:menu="Color"
+       inkscape:menu-tooltip="Invert colors"
+       color-interpolation-filters="sRGB">
+      <feColorMatrix
+         id="feColorMatrix7645"
+         type="saturate"
+         values="1"
+         result="fbSourceGraphic" />
+      <feColorMatrix
+         id="feColorMatrix7647"
+         in="fbSourceGraphic"
+         values="-1 0 0 0 1 0 -1 0 0 1 0 0 -1 0 1 0 0 0 1 0 " />
+    </filter>
+    <filter
+       id="filter7649"
+       inkscape:label="Invert"
+       x="0"
+       y="0"
+       width="1"
+       height="1"
+       inkscape:menu="Color"
+       inkscape:menu-tooltip="Invert colors"
+       color-interpolation-filters="sRGB">
+      <feColorMatrix
+         id="feColorMatrix7651"
+         type="saturate"
+         values="1"
+         result="fbSourceGraphic" />
+      <feColorMatrix
+         id="feColorMatrix7653"
+         in="fbSourceGraphic"
+         values="-1 0 0 0 1 0 -1 0 0 1 0 0 -1 0 1 0 0 0 1 0 " />
+    </filter>
+    <filter
+       id="filter7655"
+       inkscape:label="Invert"
+       x="0"
+       y="0"
+       width="1"
+       height="1"
+       inkscape:menu="Color"
+       inkscape:menu-tooltip="Invert colors"
+       color-interpolation-filters="sRGB">
+      <feColorMatrix
+         id="feColorMatrix7657"
+         type="saturate"
+         values="1"
+         result="fbSourceGraphic" />
+      <feColorMatrix
+         id="feColorMatrix7659"
+         in="fbSourceGraphic"
+         values="-1 0 0 0 1 0 -1 0 0 1 0 0 -1 0 1 0 0 0 1 0 " />
+    </filter>
+    <filter
+       id="filter7661"
+       inkscape:label="Invert"
+       x="0"
+       y="0"
+       width="1"
+       height="1"
+       inkscape:menu="Color"
+       inkscape:menu-tooltip="Invert colors"
+       color-interpolation-filters="sRGB">
+      <feColorMatrix
+         id="feColorMatrix7663"
+         type="saturate"
+         values="1"
+         result="fbSourceGraphic" />
+      <feColorMatrix
+         id="feColorMatrix7665"
+         in="fbSourceGraphic"
+         values="-1 0 0 0 1 0 -1 0 0 1 0 0 -1 0 1 0 0 0 1 0 " />
+    </filter>
+    <filter
+       id="filter7667"
+       inkscape:label="Invert"
+       x="0"
+       y="0"
+       width="1"
+       height="1"
+       inkscape:menu="Color"
+       inkscape:menu-tooltip="Invert colors"
+       color-interpolation-filters="sRGB">
+      <feColorMatrix
+         id="feColorMatrix7669"
+         type="saturate"
+         values="1"
+         result="fbSourceGraphic" />
+      <feColorMatrix
+         id="feColorMatrix7671"
+         in="fbSourceGraphic"
+         values="-1 0 0 0 1 0 -1 0 0 1 0 0 -1 0 1 0 0 0 1 0 " />
+    </filter>
+    <filter
+       id="filter7673"
+       inkscape:label="Invert"
+       x="0"
+       y="0"
+       width="1"
+       height="1"
+       inkscape:menu="Color"
+       inkscape:menu-tooltip="Invert colors"
+       color-interpolation-filters="sRGB">
+      <feColorMatrix
+         id="feColorMatrix7675"
+         type="saturate"
+         values="1"
+         result="fbSourceGraphic" />
+      <feColorMatrix
+         id="feColorMatrix7677"
+         in="fbSourceGraphic"
+         values="-1 0 0 0 1 0 -1 0 0 1 0 0 -1 0 1 0 0 0 1 0 " />
+    </filter>
+    <filter
+       id="filter7679"
+       inkscape:label="Invert"
+       x="0"
+       y="0"
+       width="1"
+       height="1"
+       inkscape:menu="Color"
+       inkscape:menu-tooltip="Invert colors"
+       color-interpolation-filters="sRGB">
+      <feColorMatrix
+         id="feColorMatrix7681"
+         type="saturate"
+         values="1"
+         result="fbSourceGraphic" />
+      <feColorMatrix
+         id="feColorMatrix7683"
+         in="fbSourceGraphic"
+         values="-1 0 0 0 1 0 -1 0 0 1 0 0 -1 0 1 0 0 0 1 0 " />
+    </filter>
+    <filter
+       id="filter7685"
+       inkscape:label="Invert"
+       x="0"
+       y="0"
+       width="1"
+       height="1"
+       inkscape:menu="Color"
+       inkscape:menu-tooltip="Invert colors"
+       color-interpolation-filters="sRGB">
+      <feColorMatrix
+         id="feColorMatrix7687"
+         type="saturate"
+         values="1"
+         result="fbSourceGraphic" />
+      <feColorMatrix
+         id="feColorMatrix7689"
+         in="fbSourceGraphic"
+         values="-1 0 0 0 1 0 -1 0 0 1 0 0 -1 0 1 0 0 0 1 0 " />
+    </filter>
+    <filter
+       id="filter7691"
+       inkscape:label="Invert"
+       x="0"
+       y="0"
+       width="1"
+       height="1"
+       inkscape:menu="Color"
+       inkscape:menu-tooltip="Invert colors"
+       color-interpolation-filters="sRGB">
+      <feColorMatrix
+         id="feColorMatrix7693"
+         type="saturate"
+         values="1"
+         result="fbSourceGraphic" />
+      <feColorMatrix
+         id="feColorMatrix7695"
+         in="fbSourceGraphic"
+         values="-1 0 0 0 1 0 -1 0 0 1 0 0 -1 0 1 0 0 0 1 0 " />
+    </filter>
+    <filter
+       id="filter7697"
+       inkscape:label="Invert"
+       x="0"
+       y="0"
+       width="1"
+       height="1"
+       inkscape:menu="Color"
+       inkscape:menu-tooltip="Invert colors"
+       color-interpolation-filters="sRGB">
+      <feColorMatrix
+         id="feColorMatrix7699"
+         type="saturate"
+         values="1"
+         result="fbSourceGraphic" />
+      <feColorMatrix
+         id="feColorMatrix7701"
+         in="fbSourceGraphic"
+         values="-1 0 0 0 1 0 -1 0 0 1 0 0 -1 0 1 0 0 0 1 0 " />
+    </filter>
+    <filter
+       id="filter7703"
+       inkscape:label="Invert"
+       x="0"
+       y="0"
+       width="1"
+       height="1"
+       inkscape:menu="Color"
+       inkscape:menu-tooltip="Invert colors"
+       color-interpolation-filters="sRGB">
+      <feColorMatrix
+         id="feColorMatrix7705"
+         type="saturate"
+         values="1"
+         result="fbSourceGraphic" />
+      <feColorMatrix
+         id="feColorMatrix7707"
+         in="fbSourceGraphic"
+         values="-1 0 0 0 1 0 -1 0 0 1 0 0 -1 0 1 0 0 0 1 0 " />
+    </filter>
+    <filter
+       id="filter7709"
+       inkscape:label="Invert"
+       x="0"
+       y="0"
+       width="1"
+       height="1"
+       inkscape:menu="Color"
+       inkscape:menu-tooltip="Invert colors"
+       color-interpolation-filters="sRGB">
+      <feColorMatrix
+         id="feColorMatrix7711"
+         type="saturate"
+         values="1"
+         result="fbSourceGraphic" />
+      <feColorMatrix
+         id="feColorMatrix7713"
+         in="fbSourceGraphic"
+         values="-1 0 0 0 1 0 -1 0 0 1 0 0 -1 0 1 0 0 0 1 0 " />
+    </filter>
+  </defs>
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#000000"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="1"
+     inkscape:pageshadow="2"
+     inkscape:zoom="3.9757812"
+     inkscape:cx="233.33957"
+     inkscape:cy="85.077535"
+     inkscape:document-units="px"
+     inkscape:current-layer="layer1"
+     showgrid="false"
+     inkscape:window-width="1438"
+     inkscape:window-height="883"
+     inkscape:window-x="0"
+     inkscape:window-y="15"
+     inkscape:window-maximized="0" />
+  <metadata
+     id="metadata3249">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(0,-872.36218)">
+    <g
+       id="g4390"
+       transform="translate(14.765254,-2.2214819)">
+      <text
+         sodipodi:linespacing="125%"
+         id="text2985"
+         y="945.79901"
+         x="111.00686"
+         style="font-size:50.49185944px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:center;line-height:125%;letter-spacing:14.94243526px;word-spacing:0px;text-anchor:middle;fill:#ffffff;fill-opacity:1;stroke:none;font-family:Myriad CAD;-inkscape-font-specification:Myriad CAD Bold"
+         xml:space="preserve"><tspan
+           style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;line-height:125%;letter-spacing:1.40205479px;fill:#ffffff;fill-opacity:1;font-family:Myriad Pro;-inkscape-font-specification:Myriad Pro Bold"
+           y="945.79901"
+           x="111.70789"
+           id="tspan2987"
+           sodipodi:role="line">J O E</tspan><tspan
+           style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;line-height:125%;letter-spacing:1.40205479px;fill:#ffffff;fill-opacity:1;font-family:Myriad Pro;-inkscape-font-specification:Myriad Pro Bold"
+           id="tspan2989"
+           y="1008.9138"
+           x="111.00686"
+           sodipodi:role="line" /></text>
+      <text
+         sodipodi:linespacing="125%"
+         id="text2991"
+         y="967.51007"
+         x="110.02861"
+         style="font-size:22.91925621px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#ffffff;fill-opacity:1;stroke:none;font-family:Myriad CAD;-inkscape-font-specification:Myriad CAD Bold"
+         xml:space="preserve"><tspan
+           style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;fill:#ffffff;fill-opacity:1;font-family:Myriad Pro;-inkscape-font-specification:Myriad Pro Bold"
+           y="967.51007"
+           x="110.02861"
+           id="tspan2993"
+           sodipodi:role="line">COLOSIMO</tspan></text>
+      <text
+         sodipodi:linespacing="125%"
+         id="text3763"
+         y="1014.6263"
+         x="110.95815"
+         style="font-size:25.48481941px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#ffffff;fill-opacity:1;stroke:none;font-family:Myriad CAD;-inkscape-font-specification:Myriad CAD Bold"
+         xml:space="preserve"><tspan
+           style="font-size:15.92801189px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0.92882866px;fill:#ffffff;fill-opacity:1;font-family:Myriad Pro;-inkscape-font-specification:Myriad Pro Bold"
+           y="1014.6263"
+           x="111.42257"
+           id="tspan3765"
+           sodipodi:role="line">j@jwcxz.com</tspan></text>
+      <text
+         xml:space="preserve"
+         style="font-size:23.27458763px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#ffffff;fill-opacity:1;stroke:none;font-family:Myriad CAD;-inkscape-font-specification:Myriad CAD Bold"
+         x="110.06184"
+         y="1001.0426"
+         id="text3767"
+         sodipodi:linespacing="125%"><tspan
+           sodipodi:role="line"
+           id="tspan3769"
+           x="110.48598"
+           y="1001.0426"
+           style="font-size:14.5466156px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0.84827369px;fill:#ffffff;fill-opacity:1;font-family:Myriad Pro;-inkscape-font-specification:Myriad Pro Bold">662-205-0760</tspan></text>
+      <text
+         xml:space="preserve"
+         style="font-size:25.48481941px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#ffffff;fill-opacity:1;stroke:none;font-family:Myriad CAD;-inkscape-font-specification:Myriad CAD Bold"
+         x="110.95815"
+         y="985.42609"
+         id="text4362"
+         sodipodi:linespacing="125%"><tspan
+           sodipodi:role="line"
+           id="tspan4364"
+           x="111.42257"
+           y="985.42609"
+           style="font-size:15.92801189px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0.92882866px;fill:#ffffff;fill-opacity:1;font-family:Myriad Pro;-inkscape-font-specification:Myriad Pro Bold">jwcxz.com</tspan></text>
+    </g>
+    <path
+       sodipodi:nodetypes="ccccccc"
+       inkscape:connector-curvature="0"
+       id="path7418"
+       d="m 362.30204,1015.6069 17.3283,-20.11333 124.78126,0 -17.32827,20.11333 17.35952,20.131 -124.78121,0 z"
+       style="fill:#000000;fill-opacity:1;stroke:none;filter:url(#filter7709)"
+       transform="matrix(0,0.80512202,-0.80133212,0,1054.1127,608.8169)" />
+    <path
+       style="fill:none;stroke:#ffffff;stroke-width:2.98795557;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0;filter:url(#filter7703)"
+       d="m 433.37246,993.40087 c 0,0 -21.94973,9.76783 0,22.21483 21.94974,12.4471 0,22.2149 0,22.2149"
+       id="path7420"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="czc"
+       transform="matrix(0,0.80512202,-0.80133212,0,1054.1127,608.8169)" />
+    <path
+       style="fill:#ffffff;fill-opacity:1;stroke:none;filter:url(#filter7697)"
+       d="m 362.30204,992.10447 17.3283,3.3891 124.78126,0 -17.32827,-3.3891 17.35952,-3.3921 -124.78121,0 z"
+       id="path7422"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="ccccccc"
+       transform="matrix(0,0.80512202,-0.80133212,0,1054.1127,608.8169)" />
+    <path
+       style="fill:#000000;fill-opacity:1;stroke:none;filter:url(#filter7691)"
+       d="m 517.35421,990.95007 -1.34375,1.5063 c -6.8198,7.68383 -13.38661,15.48183 -20.0625,23.17903 7.09526,8.2189 14.21472,16.4312 21.375,24.6321 l -142.65622,0 c -7.0312,-8.2189 -14.1684,-16.4142 -21.25,-24.6321 6.9735,-8.239 14.1094,-16.44293 21.1875,-24.68533 l 142.74997,0 z m -6.46875,2.2683 -133.78122,0 c -6.4064,7.45093 -12.7697,14.92963 -19.25,22.38153 6.4734,7.4497 12.9017,14.9192 19.3125,22.3993 l 133.74997,0 c -6.54176,-7.4341 -12.9089,-14.9172 -19.40625,-22.3638 5.69919,-6.5493 11.22026,-13.1459 16.96875,-19.68803 l 2.40625,-2.729 z"
+       id="path7424"
+       inkscape:connector-curvature="0"
+       transform="matrix(0,0.80512202,-0.80133212,0,1054.1127,608.8169)" />
+    <path
+       sodipodi:type="arc"
+       style="fill:#000000;fill-opacity:1;stroke:#ffffff;stroke-width:1.61847579;stroke-linecap:square;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0;filter:url(#filter7637)"
+       id="path7442"
+       sodipodi:cx="213.2384"
+       sodipodi:cy="551.99683"
+       sodipodi:rx="4.4332309"
+       sodipodi:ry="4.4332309"
+       d="m 217.67163,551.99683 a 4.4332309,4.4332309 0 1 1 -8.86646,0 4.4332309,4.4332309 0 1 1 8.86646,0 z"
+       transform="matrix(0,0.80512202,-0.80133212,0,689.60571,817.12213)" />
+    <path
+       transform="matrix(0,0.80512202,-0.80133212,0,689.60571,796.12279)"
+       d="m 217.67163,551.99683 a 4.4332309,4.4332309 0 1 1 -8.86646,0 4.4332309,4.4332309 0 1 1 8.86646,0 z"
+       sodipodi:ry="4.4332309"
+       sodipodi:rx="4.4332309"
+       sodipodi:cy="551.99683"
+       sodipodi:cx="213.2384"
+       id="path7444"
+       style="fill:#000000;fill-opacity:1;stroke:#ffffff;stroke-width:1.61847579;stroke-linecap:square;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0;filter:url(#filter7631)"
+       sodipodi:type="arc" />
+    <path
+       sodipodi:type="arc"
+       style="fill:#000000;fill-opacity:1;stroke:#ffffff;stroke-width:1.61847579;stroke-linecap:square;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0;filter:url(#filter7625)"
+       id="path7446"
+       sodipodi:cx="213.2384"
+       sodipodi:cy="551.99683"
+       sodipodi:rx="4.4332309"
+       sodipodi:ry="4.4332309"
+       d="m 217.67163,551.99683 a 4.4332309,4.4332309 0 1 1 -8.86646,0 4.4332309,4.4332309 0 1 1 8.86646,0 z"
+       transform="matrix(0,0.80512202,-0.80133212,0,675.28542,805.04196)" />
+    <path
+       transform="matrix(0,0.80512202,-0.80133212,0,675.28542,823.4833)"
+       d="m 217.67163,551.99683 a 4.4332309,4.4332309 0 1 1 -8.86646,0 4.4332309,4.4332309 0 1 1 8.86646,0 z"
+       sodipodi:ry="4.4332309"
+       sodipodi:rx="4.4332309"
+       sodipodi:cy="551.99683"
+       sodipodi:cx="213.2384"
+       id="path7448"
+       style="fill:#000000;fill-opacity:1;stroke:#ffffff;stroke-width:1.61847579;stroke-linecap:square;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0;filter:url(#filter7619)"
+       sodipodi:type="arc" />
+    <path
+       transform="matrix(0,0.80512202,-0.80133212,0,689.60571,768.81481)"
+       d="m 217.67163,551.99683 a 4.4332309,4.4332309 0 1 1 -8.86646,0 4.4332309,4.4332309 0 1 1 8.86646,0 z"
+       sodipodi:ry="4.4332309"
+       sodipodi:rx="4.4332309"
+       sodipodi:cy="551.99683"
+       sodipodi:cx="213.2384"
+       id="path7450"
+       style="fill:#000000;fill-opacity:1;stroke:#ffffff;stroke-width:1.61847579;stroke-linecap:square;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0;filter:url(#filter7613)"
+       sodipodi:type="arc" />
+    <path
+       sodipodi:type="arc"
+       style="fill:#000000;fill-opacity:1;stroke:#ffffff;stroke-width:1.61847579;stroke-linecap:square;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0;filter:url(#filter7607)"
+       id="path7452"
+       sodipodi:cx="213.2384"
+       sodipodi:cy="551.99683"
+       sodipodi:rx="4.4332309"
+       sodipodi:ry="4.4332309"
+       d="m 217.67163,551.99683 a 4.4332309,4.4332309 0 1 1 -8.86646,0 4.4332309,4.4332309 0 1 1 8.86646,0 z"
+       transform="matrix(0,0.80512202,-0.80133212,0,689.60571,747.81547)" />
+    <path
+       transform="matrix(0,0.80512202,-0.80133212,0,675.28542,756.73464)"
+       d="m 217.67163,551.99683 a 4.4332309,4.4332309 0 1 1 -8.86646,0 4.4332309,4.4332309 0 1 1 8.86646,0 z"
+       sodipodi:ry="4.4332309"
+       sodipodi:rx="4.4332309"
+       sodipodi:cy="551.99683"
+       sodipodi:cx="213.2384"
+       id="path7454"
+       style="fill:#000000;fill-opacity:1;stroke:#ffffff;stroke-width:1.61847579;stroke-linecap:square;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0;filter:url(#filter7601)"
+       sodipodi:type="arc" />
+    <path
+       sodipodi:type="arc"
+       style="fill:#000000;fill-opacity:1;stroke:#ffffff;stroke-width:1.61847579;stroke-linecap:square;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0;filter:url(#filter7595)"
+       id="path7456"
+       sodipodi:cx="213.2384"
+       sodipodi:cy="551.99683"
+       sodipodi:rx="4.4332309"
+       sodipodi:ry="4.4332309"
+       d="m 217.67163,551.99683 a 4.4332309,4.4332309 0 1 1 -8.86646,0 4.4332309,4.4332309 0 1 1 8.86646,0 z"
+       transform="matrix(0,0.80512202,-0.80133212,0,675.28542,775.17598)" />
+    <text
+       xml:space="preserve"
+       style="font-size:17.60482979px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:Myriad CAD;-inkscape-font-specification:Myriad CAD Bold"
+       x="-963.50397"
+       y="275.32532"
+       id="text7715"
+       sodipodi:linespacing="125%"
+       transform="matrix(0,-1,1,0,0,0)"><tspan
+         sodipodi:role="line"
+         id="tspan7717"
+         x="-963.50397"
+         y="275.32532"
+         style="fill:#ffffff;fill-opacity:1">swipe!</tspan></text>
+  </g>
+</svg>
