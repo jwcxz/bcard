@@ -11,4 +11,10 @@
 
 int main(void);
 
+enum state {
+    idle,
+    left,
+    right
+};
+
 #endif
