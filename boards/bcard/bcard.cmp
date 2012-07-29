@@ -1,4 +1,4 @@
-Cmp-Mod V01 Created by CvPcb (2012-03-17 BZR 3466)-stable date = Tue 10 Jul 2012 01:34:27 AM EDT
+Cmp-Mod V01 Created by CvPcb (2012-03-17 BZR 3466)-stable date = Sat 28 Jul 2012 10:09:09 PM EDT
 
 BeginCmp
 TimeStamp = /4F56F917;
@@ -43,38 +43,10 @@ IdModule  = SOT23_6;
 EndCmp
 
 BeginCmp
-TimeStamp = /4FC3BBC8;
-Reference = K1;
-ValeurCmp = CONN_3;
-IdModule  = SENSOR2;
-EndCmp
-
-BeginCmp
-TimeStamp = /4F737976;
-Reference = LOGO1;
-ValeurCmp = NAME;
-IdModule  = LOGO;
-EndCmp
-
-BeginCmp
-TimeStamp = /4F738885;
-Reference = LOGO2;
-ValeurCmp = QRCODE;
-IdModule  = JWCXZ;
-EndCmp
-
-BeginCmp
 TimeStamp = /4F57AA8F;
 Reference = P1;
 ValeurCmp = BATT;
 IdModule  = 2032BATTHOLDER;
-EndCmp
-
-BeginCmp
-TimeStamp = /4FBFA0FD;
-Reference = P2;
-ValeurCmp = CONN_1;
-IdModule  = PAD;
 EndCmp
 
 BeginCmp
@@ -85,17 +57,38 @@ IdModule  = SOT23;
 EndCmp
 
 BeginCmp
+TimeStamp = /4F738885;
+Reference = QRCD1;
+ValeurCmp = QRCODE;
+IdModule  = JWCXZ;
+EndCmp
+
+BeginCmp
 TimeStamp = /4F57ACF5;
 Reference = R1;
-ValeurCmp = 1M;
+ValeurCmp = 4.55M;
 IdModule  = SM0603;
 EndCmp
 
 BeginCmp
 TimeStamp = /4FBF9F06;
 Reference = R2;
+ValeurCmp = 4.55M;
+IdModule  = SM0603;
+EndCmp
+
+BeginCmp
+TimeStamp = /5014997D;
+Reference = R3;
 ValeurCmp = 1M;
 IdModule  = SM0603;
+EndCmp
+
+BeginCmp
+TimeStamp = /50149BEB;
+Reference = SENSOR1;
+ValeurCmp = CONN_4;
+IdModule  = SWIPESENSOR;
 EndCmp
 
 EndListe
