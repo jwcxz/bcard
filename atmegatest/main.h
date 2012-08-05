@@ -11,10 +11,18 @@
 
 int main(void);
 
+// state machine states
+// different methods will call states by different names
 enum state {
-    idle,
-    left,
-    right
+    ST_0,
+    ST_1,
+    ST_2
 };
+
+#define idle  ST_0
+#define left  ST_1
+#define right ST_2
+
+#define both  ST_2
 
 #endif

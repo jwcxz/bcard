@@ -99,6 +99,105 @@ void disable_float_driver(void) {
     return;
 }
 
+void int_method_2(void) {
+    uint8_t cl, cr;
+    uint8_t ol, or;
+    uint8_t i, tmp;
+    enum state st = idle;
+
+    // just got a potential touch
+    do {
+        cl = 0;
+        cr = 0;
+        for ( i=0 ; i<5 ; i++ ) {
+            tmp = sense(SNSLEFT);
+            if ( tmp > cl ) {
+                cl = tmp;
+            }
+
+            tmp = sense(SNSRGHT);
+            if ( tmp > cr ) {
+                cr = tmp;
+            }
+        }
+        ol = is_on(cl, 0);
+        or = is_on(cr, 1);
+
+        //*
+        // TODO: this can now be folded into the switch statement
+        if ( st == idle ) {
+            if ( !ol && !or ) {
+                // nope!
+                st = idle;
+                return;
+            } else if ( ol && !or ) {
+                st = left;
+            } else if ( ol && or ) {
+                st = both;
+            } else {
+                st = idle;
+            }
+        }
+
+        //* DEBUG
+        // cl:on? cr:on? state
+        //uart_tx_hex(cl);
+        //uart_tx(':');
+        uart_tx_hex(ol);
+        uart_tx(' ');
+
+        //uart_tx_hex(cr);
+        //uart_tx(':');
+        uart_tx_hex(or);
+        uart_tx(' ');
+
+        uart_tx_hex(st);
+        // */
+
+        switch(st) {
+            case idle:
+                break;
+
+            case left:
+                if ( is_on(cl, 0) && is_on(cr, 1) ) {
+                    st = both;
+                } else if ( is_on(cl, 0) ) {
+                    st = left;
+                } else {
+                    st = idle;
+                }
+
+                break;
+
+            case both:
+                if ( is_on(cr, 1) && !is_on(cl, 0) ) {
+                    LEDPIN |= _BV(LED);
+                    st = idle;
+                } else if ( is_on(cl, 0) && is_on(cr, 1) ) {
+                    st = both;
+                } else if ( is_on(cl, 0) && !is_on(cr, 1) ) {
+                    st = left;
+                } else {
+                    st = idle;
+                }
+
+                break;
+        }
+
+        //*
+        uart_tx(' ');
+
+        uart_tx_hex(st);
+        uart_tx('\n');
+        // */
+
+        _delay_ms(10);
+    } while ( st != idle );
+
+    return;
+}
+
+
 void int_method_1(void) {
     uint8_t cl, cr;
     uint8_t i, tmp;
@@ -114,7 +213,7 @@ void int_method_1(void) {
         }
     }
 
-    if ( ! is_on(cl, 0) ) {
+    if ( !is_on(cl, 0) && !is_on(cr, 1) ) {
         // nope!
         return;
     }
@@ -123,7 +222,6 @@ void int_method_1(void) {
     st = left;
 
     while ( st != idle ) {
-
         cl = 0;
         for ( i=0 ; i<5 ; i++ ) {
             tmp = sense(SNSLEFT);
@@ -140,6 +238,7 @@ void int_method_1(void) {
             }
         }
 
+        //*
         // cl:on? cr:on? state
         uart_tx_hex(cl);
         uart_tx(':');
@@ -152,6 +251,7 @@ void int_method_1(void) {
         uart_tx(' ');
 
         uart_tx_hex(st);
+        // */
 
         switch(st) {
             case idle:
@@ -159,7 +259,7 @@ void int_method_1(void) {
 
             case left:
                 if ( is_on(cl, 0) && is_on(cr, 1) ) {
-                    st = right;
+                    st = both;
                 } else if ( is_on(cl, 0) ) {
                     st = left;
                 } else {
@@ -168,12 +268,14 @@ void int_method_1(void) {
 
                 break;
 
-            case right:
+            case both:
                 if ( is_on(cr, 1) && !is_on(cl, 0) ) {
                     LEDPIN |= _BV(LED);
                     st = idle;
                 } else if ( is_on(cl, 0) && is_on(cr, 1) ) {
-                    st = right;
+                    st = both;
+                } else if ( is_on(cl, 0) && !is_on(cr, 1) ) {
+                    st = left;
                 } else {
                     st = idle;
                 }
@@ -181,10 +283,12 @@ void int_method_1(void) {
                 break;
         }
 
+        //*
         uart_tx(' ');
 
         uart_tx_hex(st);
         uart_tx('\n');
+        // */
 
         //_delay_ms(10);
     }
@@ -424,10 +528,10 @@ int main(void) {
 ISR(INT0_vect) {
     disable_float_driver();
 
-    //uart_tx('*');
+    uart_tx('*');
 
     // resistive touch phase fired
-    int_method_1();
+    int_method_2();
 
     //_delay_ms(10);
 
