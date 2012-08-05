@@ -2,13 +2,11 @@
 .include "regs.inc"
 
 ; register definitions
-.def lftoff = r27
-.def lfton  = r28
-.def rgtoff = r29
-.def rgton  = r30
-.def state = r31
+.def lthresh = r23
+.def rthresh= r24
+.def state = r25
 
-.equ ONGUESS = 50
+.equ ONGUESS = 10
 
 ; configurations that change
 .equ CLKMSR_8MHZ = 0x00
@@ -54,11 +52,11 @@ reset: ; {{{
     ; training phase
     ldi   r16, (1<<PIN_LFT)
     rcall cap_sense
-    mov   lftoff, r17
+    mov   r20, r17
 
     ldi   r16, (1<<PIN_RGT)
     rcall cap_sense
-    mov   rgtoff, r17
+    mov   r21, r17
 
     ldi r19, 4
     train_loop:
@@ -67,33 +65,39 @@ reset: ; {{{
         rcall cap_sense
 
         ; average against existing
-        lsr lftoff
-        ror r17
-        add lftoff, r17
+        lsr r20
+        lsr r17
+        add r20, r17
 
 
         ldi   r16, (1<<PIN_RGT)
         rcall cap_sense
 
         ; average against existing
-        lsr rgtoff
-        ror r17
-        add rgtoff, r17
+        lsr r21
+        lsr r17
+        add r21, r17
 
 
         dec  r19
         brne train_loop
 
 
-    ldi r16, ONGUESS
-    mov lfton, lftoff
-    add lfton, r16
-    mov rgton, rgtoff
-    add rgton, r16
+    ; define threshhold as 125% off value
+    mov lthresh, r20
+    lsr lthresh
+    lsr lthresh
+    add lthresh, r20
+    
+    mov rthresh, r21
+    lsr rthresh
+    lsr rthresh
+    add rthresh, r21
 
 
     loop:
         rcall delay_long
+        cbi PORTB, PIN_LED
 
         ldi   r16, (1<<PIN_LFT)
         rcall cap_sense
@@ -101,7 +105,7 @@ reset: ; {{{
         cpi r16, 1
         brne loop
 
-        sbi PINB, PIN_LED
+        sbi PORTB, PIN_LED
         rjmp loop
     ; }}}
 
@@ -147,11 +151,15 @@ cap_sense: ; {{{
         brne cap_sense_check_loop
 
     cap_sense_check_loop_dn:
-    ; check r17 against counter and figure out if the sensor was pressed
 
-    ; TODO
-    ;cpi  r17, 0xD0
-    cp   r17, lfton
+    ; figure out which pin's threshold to compare against
+    cpi  r16, (1<<PIN_LFT)
+    mov  r18, lthresh
+    breq compare
+    mov  r18, rthresh
+
+    compare:
+    cp   r17, r18
     brsh cap_sense_pin_on
         ldi  r16, 0
         ret

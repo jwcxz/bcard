@@ -2,7 +2,11 @@
 .include "regs.inc"
 
 ; register definitions
-.def state = r25
+.def lftoff = r21
+.def lfton  = r22
+.def rgtoff = r23
+.def rgton  = r24
+.def state  = r25
 
 ; configurations that change
 .equ CLKMSR_8MHZ = 0x00
@@ -52,8 +56,50 @@ reset: ; {{{
 
 
     ; training phase
+    ldi   r16, (1<<PIN_LFT)
+    rcall cap_sense
+    mov   lftoff, r17
+
+    ldi   r16, (1<<PIN_RGT)
+    rcall cap_sense
+    mov   rgtoff, r17
+
+    ldi r19, 4
+    train_loop:
+        ; get left pin
+        ldi   r16, (1<<PIN_LFT)
+        rcall cap_sense
+
+        ; average against existing
+        lsr lftoff
+        lsr r17
+        add lftoff, r17
+
+
+        ldi   r16, (1<<PIN_RGT)
+        rcall cap_sense
+
+        ; average against existing
+        lsr rgtoff
+        lsr r17
+        add rgtoff, r17
+
+
+        dec  r19
+        brne train_loop
+
 
     ; guess at on threshhold
+    ;ldi r16, ONGUESS
+    ;mov lfton, lftoff
+    ;lsr lfton
+    ;add lfton, lftoff
+    
+    ldi lfton, 0x18
+    
+    mov rgton, rgtoff
+    lsr rgton
+    add rgton, rgtoff
 
 
     ; enable float driver to oscillate slowly
@@ -122,8 +168,8 @@ disable_float_driver: ; {{{
 
 cap_sense: ; {{{
     ; in : r16 - sensor to use
-    ; out: r17 - pressed or unpressed
-    ;      r16 - counter value
+    ; out: r16 - pressed or unpressed
+    ;      r17 - counter value
     ; f-u: r18
 
     mov r17, r16
@@ -134,6 +180,7 @@ cap_sense: ; {{{
     out PORTB, r16      ; drive sensor
 
     ; TODO: delay?
+    rcall delay_short
 
     ldi r17, (1<<PIN_LED)   ; switch to sensor input
     out DDRB, r17
@@ -151,25 +198,20 @@ cap_sense: ; {{{
         ; if pin is 0, then break out of the loop
         breq cap_sense_check_loop_dn
 
-        ; else add 1 to the counter and check if it is going to overflow
-        ldi r16, 1
-        add r17, r16
+        ; else add 1 to the counter
+        inc r17
 
         ; check if we've hit the max
         ; if so, get out of the loop
         cpi r17, 0xFF
-        breq cap_sense_check_loop_dn
-
-        ; otherwise go back to the top of the loop
-        rjmp cap_sense_check_loop
-        ; TODO: above code can be optimized by switching breq to brne back to
-        ; cap_sense_check_loop
+        brne cap_sense_check_loop
 
     cap_sense_check_loop_dn:
     ; check r17 against counter and figure out if the sensor was pressed
 
     ; TODO
-    cpi  r17, 0xD0
+    ;cpi  r17, 0x18
+    cp   r17, lfton
     brsh cap_sense_pin_on
         ldi  r16, 0
         ret
@@ -177,9 +219,31 @@ cap_sense: ; {{{
     cap_sense_pin_on:
         ldi r16, 1
         ret
+    ; }}}
 
-    ret ; }}}
-    
+
+delay_long:
+    ldi r28, 0x10
+    rjmp dly2
+
+delay_short:
+    ldi r28, 0x01
+    ldi r27, 0x05
+    rjmp dly1
+
+
+dly2:
+    ldi r27, 0xFF
+    dly1:
+        dec r27
+        brne dly1
+
+    dec r28
+    brne dly2
+
+    ret
+
+
 int0_interrupt: ; {{{
     rcall disable_float_driver
 
