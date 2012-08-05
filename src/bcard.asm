@@ -51,7 +51,7 @@ reset: ; {{{
     cbi PORTB, PIN_LED
 
 
-    ; perform training phase
+    ; training phase
 
     ; guess at on threshhold
 

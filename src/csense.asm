@@ -2,7 +2,13 @@
 .include "regs.inc"
 
 ; register definitions
+.def lftoff = r27
+.def lfton  = r28
+.def rgtoff = r29
+.def rgton  = r30
 .def state = r31
+
+.equ ONGUESS = 50
 
 ; configurations that change
 .equ CLKMSR_8MHZ = 0x00
@@ -45,11 +51,54 @@ reset: ; {{{
     sbi DDRB,  PIN_LED
     cbi PORTB, PIN_LED
 
-    loop:
+    ; training phase
+    ldi   r16, (1<<PIN_LFT)
+    rcall cap_sense
+    mov   lftoff, r17
+
+    ldi   r16, (1<<PIN_RGT)
+    rcall cap_sense
+    mov   rgtoff, r17
+
+    ldi r19, 4
+    train_loop:
+        ; get left pin
         ldi   r16, (1<<PIN_LFT)
         rcall cap_sense
 
-        cpi r17, 1
+        ; average against existing
+        lsr lftoff
+        ror r17
+        add lftoff, r17
+
+
+        ldi   r16, (1<<PIN_RGT)
+        rcall cap_sense
+
+        ; average against existing
+        lsr rgtoff
+        ror r17
+        add rgtoff, r17
+
+
+        dec  r19
+        brne train_loop
+
+
+    ldi r16, ONGUESS
+    mov lfton, lftoff
+    add lfton, r16
+    mov rgton, rgtoff
+    add rgton, r16
+
+
+    loop:
+        rcall delay_long
+
+        ldi   r16, (1<<PIN_LFT)
+        rcall cap_sense
+
+        cpi r16, 1
         brne loop
 
         sbi PINB, PIN_LED
@@ -59,8 +108,8 @@ reset: ; {{{
 
 cap_sense: ; {{{
     ; in : r16 - sensor to use
-    ; out: r17 - pressed or unpressed
-    ;      r16 - counter value
+    ; out: r16 - pressed or unpressed
+    ;      r17 - counter value
     ; f-u: r18
 
     mov r17, r16
@@ -101,7 +150,8 @@ cap_sense: ; {{{
     ; check r17 against counter and figure out if the sensor was pressed
 
     ; TODO
-    cpi  r17, 0xD0
+    ;cpi  r17, 0xD0
+    cp   r17, lfton
     brsh cap_sense_pin_on
         ldi  r16, 0
         ret
@@ -109,12 +159,11 @@ cap_sense: ; {{{
     cap_sense_pin_on:
         ldi r16, 1
         ret
-
-    ret ; }}}
+    ; }}}
 
 
 delay_long:
-    ldi r28, 0xFF
+    ldi r28, 0x10
     rjmp dly2
 
 delay_short:
