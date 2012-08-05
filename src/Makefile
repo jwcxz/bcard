@@ -1,6 +1,6 @@
-PROJNAME=bcard
+PROJNAME=csense
 
-SRC=bcard.asm
+SRC=$(PROJNAME).asm
 INC=
 
 AVRDUDE_ARGS=-c dasaftdi -p t10 -P /dev/ttyUSB0

@@ -1,0 +1,90 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.8	//
+$(HEX)	Makefile	/^$(HEX):$/;"	t
+.PHONY	Makefile	/^.PHONY: writeflash clean$/;"	t
+.SUFFIXES	Makefile	/^.SUFFIXES: .asm .obj .hex$/;"	t
+ASM	Makefile	/^ASM=avra$/;"	m
+AVRDUDE	Makefile	/^AVRDUDE=avrdude$/;"	m
+AVRDUDE_ARGS	Makefile	/^AVRDUDE_ARGS=-c dasaftdi -p t10 -P \/dev\/ttyUSB0$/;"	m
+AVR_FUSE	Makefile	/^AVR_FUSE=0xff$/;"	m
+COF	Makefile	/^COF=$(PROJNAME).cof$/;"	m
+EEH	Makefile	/^EEH=$(PROJNAME).eep.hex$/;"	m
+HEX	Makefile	/^HEX=$(PROJNAME).hex$/;"	m
+INC	Makefile	/^INC=$/;"	m
+LST	Makefile	/^LST=$(PROJNAME).lst$/;"	m
+MAP	Makefile	/^MAP=$(PROJNAME).map$/;"	m
+OBJ	Makefile	/^OBJ=$(PROJNAME).obj$/;"	m
+PROJNAME	Makefile	/^PROJNAME=bcard$/;"	m
+RESET	setport.asm	/^RESET: ;set PB2 as an output in the Data Direction Register for PORTB$/;"	l
+RESET	test.asm	/^RESET: ;set PB2 as an output in the Data Direction Register for PORTB$/;"	l
+SRC	Makefile	/^SRC=bcard.asm$/;"	m
+all	Makefile	/^all: $(HEX)$/;"	t
+brne	test.asm	/^brne  loop1     ;branch if not 0     $/;"	l
+brne	test.asm	/^brne  loop2          $/;"	l
+brne	test.asm	/^brne  loop2         $/;"	l
+brne	test.asm	/^brne  loop2 $/;"	l
+cap_sense	bcard.asm	/^cap_sense: ; {{{$/;"	l
+cap_sense_check_loop	bcard.asm	/^    cap_sense_check_loop:$/;"	l
+cap_sense_check_loop_dn	bcard.asm	/^    cap_sense_check_loop_dn:$/;"	l
+cap_sense_pin_on	bcard.asm	/^    cap_sense_pin_on:$/;"	l
+cbi	setport.asm	/^cbi PORTB, led$/;"	l
+clean	Makefile	/^clean:$/;"	t
+clr	test.asm	/^clr   r16  ;clear counter1 $/;"	l
+clr	test.asm	/^clr   r16$/;"	l
+clr	test.asm	/^clr   r17 $/;"	l
+dec	test.asm	/^dec   r16  ;decrement counter1 $/;"	l
+dec	test.asm	/^dec   r16$/;"	l
+dec	test.asm	/^dec   r17  ;decrement counter2 $/;"	l
+dec	test.asm	/^dec   r17$/;"	l
+dec	test.asm	/^dec   r18 $/;"	l
+disable_float_driver	bcard.asm	/^disable_float_driver: ; {{{$/;"	l
+enable_float_driver	bcard.asm	/^enable_float_driver: ; {{{$/;"	l
+flash	setport.asm	/^flash: ;main loop  $/;"	l
+flash	test.asm	/^flash: ;main loop  $/;"	l
+hex	Makefile	/^hex: $(HEX)$/;"	t
+install	Makefile	/^install: writeflash$/;"	t
+int0_dn	bcard.asm	/^    int0_dn:$/;"	l
+int0_interrupt	bcard.asm	/^int0_interrupt: ; {{{$/;"	l
+int0_sense_loop	bcard.asm	/^    int0_sense_loop:$/;"	l
+int0_sense_loop_end	bcard.asm	/^    int0_sense_loop_end:$/;"	l
+ldi	test.asm	/^ldi   r17, 170 ;load counter1 delay         $/;"	l
+ldi	test.asm	/^ldi   r18, 1 ;load counter3 delay$/;"	l
+lds	test.asm	/^lds r15, 128$/;"	l
+loop	bcard.asm	/^    loop:$/;"	l
+loop	bcard.old.asm	/^loop:$/;"	l
+loop1	test.asm	/^loop1: ;nested loop that decrements counter 1 (255) x counter2 (time1) times (ie. 255*time1)$/;"	l
+loop2	test.asm	/^loop2: ;decrement counter 1(255) x counter2(255) x counter3(time2) (ie. 255*255*time2) $/;"	l
+main	bcard.old.asm	/^main:$/;"	l
+offDelay	test.asm	/^offDelay: ;same as onDelay but with a third loop     $/;"	l
+onDelay	test.asm	/^onDelay:       $/;"	l
+rcall	test.asm	/^rcall offDelay$/;"	l
+rcall	test.asm	/^rcall onDelay            $/;"	l
+reset	bcard.asm	/^reset: ; {{{$/;"	l
+ret	test.asm	/^ret      $/;"	l
+ret	test.asm	/^ret     $/;"	l
+rjmp	bcard.old.asm	/^rjmp start$/;"	l
+rjmp	setport.asm	/^rjmp RESET  ;go and set up PORTB as an output $/;"	l
+rjmp	setport.asm	/^rjmp flash$/;"	l
+rjmp	test.asm	/^rjmp  flash  ;return to beginning of loop$/;"	l
+rjmp	test.asm	/^rjmp RESET  ;go and set up PORTB as an output $/;"	l
+sbi	setport.asm	/^sbi   DDRB, led  ;connect LED to PB2 (Attiny10 pin 4)$/;"	l
+sbi	setport.asm	/^sbi PORTB, led$/;"	l
+sm_both_chk_both	bcard.asm	/^            sm_both_chk_both:$/;"	l
+sm_both_chk_left	bcard.asm	/^            sm_both_chk_left:$/;"	l
+sm_both_chk_rght	bcard.asm	/^            sm_both_chk_rght:$/;"	l
+sm_chk_both	bcard.asm	/^        sm_chk_both:$/;"	l
+sm_chk_idle	bcard.asm	/^        sm_chk_idle:$/;"	l
+sm_chk_left	bcard.asm	/^        sm_chk_left:$/;"	l
+sm_idle_chk_both	bcard.asm	/^            sm_idle_chk_both:$/;"	l
+sm_idle_chk_left	bcard.asm	/^            sm_idle_chk_left:$/;"	l
+sm_left_chk_both	bcard.asm	/^            sm_left_chk_both:$/;"	l
+sm_left_chk_left	bcard.asm	/^            sm_left_chk_left:$/;"	l
+snl_rd_loop	bcard.old.asm	/^    snl_rd_loop:$/;"	l
+snl_rd_loop_dn	bcard.old.asm	/^    snl_rd_loop_dn:$/;"	l
+start	bcard.old.asm	/^start:$/;"	l
+writeflash	Makefile	/^writeflash: hex$/;"	t
+writefuse	Makefile	/^writefuse:$/;"	t
