@@ -1,4 +1,4 @@
-PROJNAME=csense
+PROJNAME=bcard
 
 SRC=$(PROJNAME).asm
 INC=

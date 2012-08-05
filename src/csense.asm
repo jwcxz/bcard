@@ -6,8 +6,6 @@
 .def rthresh= r24
 .def state = r25
 
-.equ ONGUESS = 10
-
 ; configurations that change
 .equ CLKMSR_8MHZ = 0x00
 .equ CLKMSR_128K = 0x01

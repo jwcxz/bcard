@@ -2,11 +2,9 @@
 .include "regs.inc"
 
 ; register definitions
-.def lftoff = r21
-.def lfton  = r22
-.def rgtoff = r23
-.def rgton  = r24
-.def state  = r25
+.def lthresh = r23
+.def rthresh= r24
+.def state = r25
 
 ; configurations that change
 .equ CLKMSR_8MHZ = 0x00
@@ -14,7 +12,7 @@
 
 ; pin definitions
 ;.equ PIN_LED = 0
-.equ PIN_LED = 2
+.equ PIN_LED = 0
 .equ PIN_LFT = 1
 .equ PIN_FDR = 1
 .equ PIN_FLT = 2
@@ -58,11 +56,11 @@ reset: ; {{{
     ; training phase
     ldi   r16, (1<<PIN_LFT)
     rcall cap_sense
-    mov   lftoff, r17
+    mov   r20, r17
 
     ldi   r16, (1<<PIN_RGT)
     rcall cap_sense
-    mov   rgtoff, r17
+    mov   r21, r17
 
     ldi r19, 4
     train_loop:
@@ -71,35 +69,34 @@ reset: ; {{{
         rcall cap_sense
 
         ; average against existing
-        lsr lftoff
+        lsr r20
         lsr r17
-        add lftoff, r17
+        add r20, r17
 
 
         ldi   r16, (1<<PIN_RGT)
         rcall cap_sense
 
         ; average against existing
-        lsr rgtoff
+        lsr r21
         lsr r17
-        add rgtoff, r17
+        add r21, r17
 
 
         dec  r19
         brne train_loop
 
 
-    ; guess at on threshhold
-    ;ldi r16, ONGUESS
-    ;mov lfton, lftoff
-    ;lsr lfton
-    ;add lfton, lftoff
+    ; define threshhold as 125% off value
+    mov lthresh, r20
+    lsr lthresh
+    lsr lthresh
+    add lthresh, r20
     
-    ldi lfton, 0x18
-    
-    mov rgton, rgtoff
-    lsr rgton
-    add rgton, rgtoff
+    mov rthresh, r21
+    lsr rthresh
+    lsr rthresh
+    add rthresh, r21
 
 
     ; enable float driver to oscillate slowly
@@ -162,8 +159,7 @@ disable_float_driver: ; {{{
     out TCCR0B, r16
     cbi DDRB, PIN_FDR
 
-    ret
-    ; }}}
+    ret ; }}}
 
 
 cap_sense: ; {{{
@@ -207,11 +203,15 @@ cap_sense: ; {{{
         brne cap_sense_check_loop
 
     cap_sense_check_loop_dn:
-    ; check r17 against counter and figure out if the sensor was pressed
 
-    ; TODO
-    ;cpi  r17, 0x18
-    cp   r17, lfton
+    ; figure out which pin's threshold to compare against
+    cpi  r16, (1<<PIN_LFT)
+    mov  r18, lthresh
+    breq compare
+    mov  r18, rthresh
+
+    compare:
+    cp   r17, r18
     brsh cap_sense_pin_on
         ldi  r16, 0
         ret
@@ -222,7 +222,7 @@ cap_sense: ; {{{
     ; }}}
 
 
-delay_long:
+delay_long: ; {{{
     ldi r28, 0x10
     rjmp dly2
 
@@ -231,6 +231,9 @@ delay_short:
     ldi r27, 0x05
     rjmp dly1
 
+delay_reallylong:
+    ldi r28, 0xFF
+    rjmp dly2
 
 dly2:
     ldi r27, 0xFF
@@ -241,13 +244,12 @@ dly2:
     dec r28
     brne dly2
 
-    ret
+    ret ; }}}
 
 
 int0_interrupt: ; {{{
     rcall disable_float_driver
 
-    sbi PINB, PIN_LED
     ; now that we've hit an interrupt, it's time to detect a swipe
 
     ldi state, ST_IDLE
@@ -343,8 +345,11 @@ int0_interrupt: ; {{{
                 ;
                 ; TODO: pwm shit!
                 ;
-                ldi r17, (1<<PIN_LED)
-                out PINB, r17
+                ;ldi r17, (1<<PIN_LED)
+                ;out PINB, r17
+                sbi DDRB, PIN_LED
+                sbi PORTB, PIN_LED
+                rcall delay_reallylong
                 rjmp int0_dn
 
             sm_both_chk_both:
