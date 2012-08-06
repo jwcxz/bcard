@@ -1,10 +1,16 @@
 .DEVICE attiny10
 .include "regs.inc"
 
+.equ CFG_PWMLOOPS = 0x04
+
 ; register definitions
 .def lthresh = r23
 .def rthresh= r24
 .def state = r25
+.def XH = r27
+.def XL = r26
+.def ZH = r31
+.def ZL = r30
 
 ; configurations that change
 .equ CLKMSR_8MHZ = 0x00
@@ -37,6 +43,8 @@
     rjmp reset
 .org 0x01
     rjmp int0_interrupt
+.org 0x08
+    rjmp wdt_interrupt
 
 
 reset: ; {{{
@@ -342,15 +350,82 @@ int0_interrupt: ; {{{
             sm_both_chk_rght:
                 cpi  r16, SNS_RGHT
                 brne sm_both_chk_both
-                ;
-                ; TODO: pwm shit!
-                ;
-                ;ldi r17, (1<<PIN_LED)
-                ;out PINB, r17
-                sbi DDRB, PIN_LED
-                sbi PORTB, PIN_LED
-                rcall delay_reallylong
-                rjmp int0_dn
+
+                ; what follows is almost an exact copy of scott-42's branch of
+                ; Adafruit's iCuffLinks (which are totally awesome, by the way)
+
+                ldi r16, (1<<7)|(1<<6)|(1<<0) ; COM0A1, COM0A0, WGM00
+                out TCCR0A, r16
+                ldi r16, (1<<7)|(1<<0) ; ICN0(!?), CS00
+                out TCCR0B, r16
+
+                ldi r16, 0
+                out OCR0AH, r16 ; high portion of counter should be 0xFF
+
+                ldi r16, (1<<0) ; SE
+                out SMCR, r16   ; sleep enable at idle TODO: power-down?
+
+                sei
+
+                ; number of loops of the pwm cycle
+                ldi r17, CFG_PWMLOOPS
+
+                pwm_loop_start:
+                    ; 0x4000 (start of code) + offset(sinetbl)
+                    ldi ZH, high(sinetbl*2) + 0x40
+                    ldi ZL,  low(sinetbl*2)
+
+                pwm_loop:
+                    ; rant time!
+                    ; avra is not quite the assembler it claims to be.  It's a
+                    ; bit buggy when it comes to certain instructions.  When
+                    ; trying to perform an LD instruction, it claims that the
+                    ; ATtiny10 doesn't support the instruction.  But lololol it
+                    ; does.  Look at the iCuffLinks code, after all.  So using
+                    ; the information at this page:
+                    ;   http://www.wrightflyer.co.uk/asm/Html/LD.html
+                    ; I constructed the opcode 1001 0001 0000 1101 (0x910D),
+                    ; which corresponds to LD R16, X+.  But that wasn't good
+                    ; enough for me.  I wanted to actually see if I could use
+                    ; the Z pointer instead of the X pointer.  Of course, I
+                    ; could probably find the associated instruction for this
+                    ; in the Atmel manuals, but instead, I decided to
+                    ; investigate the iCuffLinks code.  There's only one 
+                    ; CPI R16, 0 instruction and I know that corresponds to the
+                    ; word 0x3000, so I looked for 0030 in the hex file and
+                    ; sure enough, I found that the instruction before it was
+                    ; 0x9101, which is pretty close to 0x910D, so I tried it
+                    ; and it worked.  tl;dr damnit, avra!  :P
+                    .dw  0x9101         ; ld r16, z+ : 1001 0001 0000 0001
+                    cpi  r16, 0         ; check if we have reached the end of the table
+                    brne pwm_loop_do    ; if not, perform pwm
+
+                    dec  r17            ; decrement the PWM loop
+                    brne pwm_loop_start ; if we're down to 0, start back at the
+                                        ; beginning of the waveform table
+                    rjmp int0_dn        ; otherwise, we're done here, so finish
+                                        ; up the interrupt
+
+                pwm_loop_do:
+                    out OCR0AL, r16     ; dump PWM value to timer
+
+                    ldi r16, 0xD8       ; prepare CCP key
+                    out CCP, r16        ; dump signature
+
+                    ldi r16, (1<<6)     ; WDIE, 2k cycles
+                    out WDTCSR, r16
+
+                    wdr 
+                    sleep
+
+                    ldi r16, (1<<6)|(1<<0) ; WDIE, 4k cycles
+                    out WDTCSR, r16
+
+                    wdr
+                    sleep
+
+                    rjmp pwm_loop
+
 
             sm_both_chk_both:
                 cpi  r16, SNS_BOTH
@@ -361,7 +436,7 @@ int0_interrupt: ; {{{
             sm_both_chk_left:
                 cpi  r16, SNS_LEFT
                 brne int0_dn
-                ldi state, ST_LEFT
+                ldi  state, ST_LEFT
                 rjmp int0_sense_loop_end
 
 
@@ -375,3 +450,18 @@ int0_interrupt: ; {{{
     ; re-enabe floating driver and call it a day
     rcall enable_float_driver
     reti ; }}}
+
+
+wdt_interrupt: ; {{{
+    ; when the wdt hits, just return
+    reti ; }}}
+
+
+sinetbl: ; {{{
+    ; pwm table
+    ;.db 1, 1, 2, 3, 5, 8, 11, 15, 20, 25, 30, 36, 43, 49, 56, 64, 72, 80, 88, 97, 105, 114, 123, 132, 141, 150, 158, 167, 175, 183, 191, 199, 206, 212, 219, 225, 230, 235, 240, 244, 247, 250, 252, 253, 254, 255, 254, 253
+    ;.db 252, 250, 247, 244, 240, 235, 230, 225, 219, 212, 206, 199, 191, 183, 175, 167, 158, 150, 141, 132, 123, 114, 105, 97, 88, 80, 72, 64, 56, 49, 43, 36, 30, 25, 20, 15, 11, 8, 5, 3, 2, 1, 0, 0
+    ; I'm using the inversion of the table so that it starts on low brightness
+    .db 254, 254, 253, 252, 250, 247, 244, 240, 235, 230, 225, 219, 212, 206, 199, 191, 183, 175, 167, 158, 150, 141, 132, 123, 114, 105, 97, 88, 80, 72, 64, 56, 49, 43, 36, 30, 25, 20, 15, 11, 8, 5, 3, 2, 1, 1, 1, 2
+    .db 3, 5, 8, 11, 15, 20, 25, 30, 36, 43, 49, 56, 64, 72, 80, 88, 97, 105, 114, 123, 132, 141, 150, 158, 167, 175, 183, 191, 199, 206, 212, 219, 225, 230, 235, 240, 244, 247, 250, 252, 253, 254, 0, 0
+    ; }}}
