@@ -7,8 +7,6 @@
 .def lthresh = r23
 .def rthresh= r24
 .def state = r25
-.def XH = r27
-.def XL = r26
 .def ZH = r31
 .def ZL = r30
 
@@ -98,11 +96,9 @@ reset: ; {{{
     ; define threshhold as 125% off value
     mov lthresh, r20
     lsr lthresh
-    lsr lthresh
     add lthresh, r20
     
     mov rthresh, r21
-    lsr rthresh
     lsr rthresh
     add rthresh, r21
 
@@ -301,13 +297,13 @@ int0_interrupt: ; {{{
             sm_idle_chk_left:
                 cpi  r16, SNS_LEFT
                 brne sm_idle_chk_both
-                ldi state, ST_LEFT
+                ldi  state, ST_LEFT
                 rjmp int0_sense_loop_end
 
             sm_idle_chk_both:
                 cpi  r16, SNS_BOTH
                 brne int0_dn
-                ldi state, ST_BOTH
+                ldi  state, ST_BOTH
                 rjmp int0_sense_loop_end
 
 
@@ -326,7 +322,7 @@ int0_interrupt: ; {{{
             sm_left_chk_both:
                 cpi  r16, SNS_BOTH
                 brne sm_left_chk_left
-                ldi state, ST_BOTH
+                ldi  state, ST_BOTH
                 rjmp int0_sense_loop_end
 
             sm_left_chk_left:
@@ -397,7 +393,7 @@ int0_interrupt: ; {{{
                     ; 0x9101, which is pretty close to 0x910D, so I tried it
                     ; and it worked.  tl;dr damnit, avra!  :P
                     .dw  0x9101         ; ld r16, z+ : 1001 0001 0000 0001
-                    cpi  r16, 0         ; check if we have reached the end of the table
+                    cpi  r16, 0xFF      ; check if we have reached the end of the table
                     brne pwm_loop_do    ; if not, perform pwm
 
                     dec  r17            ; decrement the PWM loop
@@ -459,9 +455,16 @@ wdt_interrupt: ; {{{
 
 sinetbl: ; {{{
     ; pwm table
+    ; this, again, is from iCuffLinks, with the modification that I have
+    ; inverted the table (i.e. 0xFF - [value in iCuffLinks table])
+    ; this inversion allows me to start and end at zero brightness so that it's
+    ; seamless.  The other thing is that a bug in avra doesn't like it when the
+    ; .db string is long, so I had to split the table up.  There must be an
+    ; even number of elements in the .db array.
+    .db 254, 254, 253, 252, 250, 247, 244, 240, 235, 230, 225, 219, 212, 206, 199, 191, 183, 175, 167, 158, 150, 141, 132, 123, 114, 105, 97, 88, 80, 72, 64, 56, 49, 43, 36, 30, 25, 20, 15, 11, 8, 5, 3, 2, 1, 0, 1, 2
+    .db 3, 5, 8, 11, 15, 20, 25, 30, 36, 43, 49, 56, 64, 72, 80, 88, 97, 105, 114, 123, 132, 141, 150, 158, 167, 175, 183, 191, 199, 206, 212, 219, 225, 230, 235, 240, 244, 247, 250, 252, 253, 254, 255, 255
+    
+    ; original values are as follows (starts and ends at high brightness)
     ;.db 1, 1, 2, 3, 5, 8, 11, 15, 20, 25, 30, 36, 43, 49, 56, 64, 72, 80, 88, 97, 105, 114, 123, 132, 141, 150, 158, 167, 175, 183, 191, 199, 206, 212, 219, 225, 230, 235, 240, 244, 247, 250, 252, 253, 254, 255, 254, 253
     ;.db 252, 250, 247, 244, 240, 235, 230, 225, 219, 212, 206, 199, 191, 183, 175, 167, 158, 150, 141, 132, 123, 114, 105, 97, 88, 80, 72, 64, 56, 49, 43, 36, 30, 25, 20, 15, 11, 8, 5, 3, 2, 1, 0, 0
-    ; I'm using the inversion of the table so that it starts on low brightness
-    .db 254, 254, 253, 252, 250, 247, 244, 240, 235, 230, 225, 219, 212, 206, 199, 191, 183, 175, 167, 158, 150, 141, 132, 123, 114, 105, 97, 88, 80, 72, 64, 56, 49, 43, 36, 30, 25, 20, 15, 11, 8, 5, 3, 2, 1, 1, 1, 2
-    .db 3, 5, 8, 11, 15, 20, 25, 30, 36, 43, 49, 56, 64, 72, 80, 88, 97, 105, 114, 123, 132, 141, 150, 158, 167, 175, 183, 191, 199, 206, 212, 219, 225, 230, 235, 240, 244, 247, 250, 252, 253, 254, 0, 0
     ; }}}
