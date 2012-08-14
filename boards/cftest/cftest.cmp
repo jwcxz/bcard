@@ -1,0 +1,45 @@
+Cmp-Mod V01 Created by CvPcb (2012-03-17 BZR 3466)-stable date = Mon 13 Aug 2012 09:09:18 PM EDT
+
+BeginCmp
+TimeStamp = /5029A489;
+Reference = D1;
+ValeurCmp = LED;
+IdModule  = LED-5MM;
+EndCmp
+
+BeginCmp
+TimeStamp = /5029A496;
+Reference = D2;
+ValeurCmp = LED;
+IdModule  = LED-5MM;
+EndCmp
+
+BeginCmp
+TimeStamp = /5029A49C;
+Reference = D3;
+ValeurCmp = LED;
+IdModule  = LED-5MM;
+EndCmp
+
+BeginCmp
+TimeStamp = /5029A4A2;
+Reference = D4;
+ValeurCmp = LED;
+IdModule  = LED-5MM;
+EndCmp
+
+BeginCmp
+TimeStamp = /5029A4CB;
+Reference = PGND1;
+ValeurCmp = CONN_1;
+IdModule  = 1pin;
+EndCmp
+
+BeginCmp
+TimeStamp = /5029A469;
+Reference = PVCC1;
+ValeurCmp = CONN_1;
+IdModule  = 1pin;
+EndCmp
+
+EndListe
