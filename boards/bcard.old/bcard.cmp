@@ -1,0 +1,94 @@
+Cmp-Mod V01 Created by CvPcb (2012-03-17 BZR 3466)-stable date = Sat 28 Jul 2012 10:09:09 PM EDT
+
+BeginCmp
+TimeStamp = /4F56F917;
+Reference = C1;
+ValeurCmp = 10uF;
+IdModule  = SM0805;
+EndCmp
+
+BeginCmp
+TimeStamp = /4F57A951;
+Reference = D1;
+ValeurCmp = LED;
+IdModule  = 1208vert;
+EndCmp
+
+BeginCmp
+TimeStamp = /4F5860BF;
+Reference = D2;
+ValeurCmp = LED;
+IdModule  = 1208vert;
+EndCmp
+
+BeginCmp
+TimeStamp = /4F5860C2;
+Reference = D3;
+ValeurCmp = LED;
+IdModule  = 1208vert;
+EndCmp
+
+BeginCmp
+TimeStamp = /4F5860C5;
+Reference = D4;
+ValeurCmp = LED;
+IdModule  = 1208vert;
+EndCmp
+
+BeginCmp
+TimeStamp = /4F56DC44;
+Reference = IC1;
+ValeurCmp = ATTINY10-TS;
+IdModule  = SOT23_6;
+EndCmp
+
+BeginCmp
+TimeStamp = /4F57AA8F;
+Reference = P1;
+ValeurCmp = BATT;
+IdModule  = 2032BATTHOLDER;
+EndCmp
+
+BeginCmp
+TimeStamp = /4F57A871;
+Reference = Q1;
+ValeurCmp = BC846A;
+IdModule  = SOT23;
+EndCmp
+
+BeginCmp
+TimeStamp = /4F738885;
+Reference = QRCD1;
+ValeurCmp = QRCODE;
+IdModule  = JWCXZ;
+EndCmp
+
+BeginCmp
+TimeStamp = /4F57ACF5;
+Reference = R1;
+ValeurCmp = 4.55M;
+IdModule  = SM0603;
+EndCmp
+
+BeginCmp
+TimeStamp = /4FBF9F06;
+Reference = R2;
+ValeurCmp = 4.55M;
+IdModule  = SM0603;
+EndCmp
+
+BeginCmp
+TimeStamp = /5014997D;
+Reference = R3;
+ValeurCmp = 1M;
+IdModule  = SM0603;
+EndCmp
+
+BeginCmp
+TimeStamp = /50149BEB;
+Reference = SENSOR1;
+ValeurCmp = CONN_4;
+IdModule  = SWIPESENSOR;
+EndCmp
+
+EndListe

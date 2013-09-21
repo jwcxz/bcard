@@ -1,0 +1,15 @@
+ref	value	footprint	Field1	Field2
+C1	10uF	SM0805	GRM21BR60J106KE19L	http://search.digikey.com/us/en/products/GRM21BR60J106KE19L/490-1717-1-ND/587426
+D1	LED	1208vert	APT3216QBC/D	http://www.digikey.com/product-detail/en/APA3010QBC%2FD-GX/754-1582-1-ND/2757973
+D2	LED	1208vert	APT3216QBC/D	http://www.digikey.com/product-detail/en/APA3010QBC%2FD-GX/754-1582-1-ND/2757973
+D3	LED	1208vert	APT3216QBC/D	http://www.digikey.com/product-detail/en/APA3010QBC%2FD-GX/754-1582-1-ND/2757973
+D4	LED	1208vert	APT3216QBC/D	http://www.digikey.com/product-detail/en/APA3010QBC%2FD-GX/754-1582-1-ND/2757973
+IC1	ATTINY10-TS	SOT23_6	ATTINY10-TSHR	http://search.digikey.com/us/en/products/ATTINY10-TSHR/ATTINY10-TSHRCT-ND/2136158
+K1	CONN_3	SENSOR2
+LOGO1	NAME	LOGO
+LOGO2	QRCODE	JWCXZ
+P1	BATT	2032BATTHOLDER	BK-912	http://www.digikey.com/product-detail/en/BK-912/BK-912-ND/2647825
+P2	CONN_1	PAD
+Q1	BC846A	SOT323	BC846A	http://search.digikey.com/us/en/products/BC846A,215/568-4866-1-ND/2122195
+R1	1M	SM0603	RC0603JR-071ML	http://search.digikey.com/us/en/products/RC0603JR-071ML/311-1.0MGRCT-ND/729625
+R2	1M	SM0603	RC0603JR-071ML	http://search.digikey.com/us/en/products/RC0603JR-071ML/311-1.0MGRCT-ND/729625

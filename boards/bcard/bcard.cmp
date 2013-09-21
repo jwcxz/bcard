@@ -1,94 +1,101 @@
-Cmp-Mod V01 Created by CvPcb (2012-03-17 BZR 3466)-stable date = Sat 28 Jul 2012 10:09:09 PM EDT
+Cmp-Mod V01 Created by CvPcb (2013-07-14 BZR 4242)-stable date = Sat 21 Sep 2013 03:55:28 AM PDT
 
 BeginCmp
-TimeStamp = /4F56F917;
+TimeStamp = /523D7056;
 Reference = C1;
-ValeurCmp = 10uF;
-IdModule  = SM0805;
+ValeurCmp = C;
+IdModule  = SM0402;
 EndCmp
 
 BeginCmp
-TimeStamp = /4F57A951;
+TimeStamp = /523D6A66;
+Reference = C2;
+ValeurCmp = C;
+IdModule  = SM0402;
+EndCmp
+
+BeginCmp
+TimeStamp = /523D6A73;
+Reference = C3;
+ValeurCmp = C;
+IdModule  = SM0402;
+EndCmp
+
+BeginCmp
+TimeStamp = /523D6696;
 Reference = D1;
 ValeurCmp = LED;
-IdModule  = 1208vert;
+IdModule  = LED-1206;
 EndCmp
 
 BeginCmp
-TimeStamp = /4F5860BF;
+TimeStamp = /523D66C2;
 Reference = D2;
 ValeurCmp = LED;
-IdModule  = 1208vert;
+IdModule  = LED-1206;
 EndCmp
 
 BeginCmp
-TimeStamp = /4F5860C2;
+TimeStamp = /523D66CE;
 Reference = D3;
 ValeurCmp = LED;
-IdModule  = 1208vert;
+IdModule  = LED-1206;
 EndCmp
 
 BeginCmp
-TimeStamp = /4F5860C5;
+TimeStamp = /523D6716;
 Reference = D4;
 ValeurCmp = LED;
-IdModule  = 1208vert;
+IdModule  = LED-1206;
 EndCmp
 
 BeginCmp
-TimeStamp = /4F56DC44;
+TimeStamp = /523D66C8;
+Reference = D5;
+ValeurCmp = LED;
+IdModule  = LED-1206;
+EndCmp
+
+BeginCmp
+TimeStamp = /523D66B2;
+Reference = D6;
+ValeurCmp = LED;
+IdModule  = LED-1206;
+EndCmp
+
+BeginCmp
+TimeStamp = /523D66A5;
+Reference = D7;
+ValeurCmp = LED;
+IdModule  = LED-1206;
+EndCmp
+
+BeginCmp
+TimeStamp = /523D693A;
+Reference = D8;
+ValeurCmp = LED;
+IdModule  = LED-1206;
+EndCmp
+
+BeginCmp
+TimeStamp = /523D6EDA;
 Reference = IC1;
-ValeurCmp = ATTINY10-TS;
-IdModule  = SOT23_6;
+ValeurCmp = ATTINY24-SS;
+IdModule  = SO14E;
 EndCmp
 
 BeginCmp
-TimeStamp = /4F57AA8F;
+TimeStamp = /523D6EF8;
 Reference = P1;
-ValeurCmp = BATT;
+ValeurCmp = CONN_2;
 IdModule  = 2032BATTHOLDER;
 EndCmp
 
 BeginCmp
-TimeStamp = /4F57A871;
-Reference = Q1;
-ValeurCmp = BC846A;
-IdModule  = SOT23;
-EndCmp
-
-BeginCmp
-TimeStamp = /4F738885;
-Reference = QRCD1;
-ValeurCmp = QRCODE;
-IdModule  = JWCXZ;
-EndCmp
-
-BeginCmp
-TimeStamp = /4F57ACF5;
-Reference = R1;
-ValeurCmp = 4.55M;
-IdModule  = SM0603;
-EndCmp
-
-BeginCmp
-TimeStamp = /4FBF9F06;
-Reference = R2;
-ValeurCmp = 4.55M;
-IdModule  = SM0603;
-EndCmp
-
-BeginCmp
-TimeStamp = /5014997D;
-Reference = R3;
-ValeurCmp = 1M;
-IdModule  = SM0603;
-EndCmp
-
-BeginCmp
-TimeStamp = /50149BEB;
-Reference = SENSOR1;
-ValeurCmp = CONN_4;
-IdModule  = SWIPESENSOR;
+TimeStamp = /523D6A54;
+Reference = X1;
+ValeurCmp = CRYSTAL;
+IdModule  = crystal_FA238-TSX3225;
 EndCmp
 
 EndListe

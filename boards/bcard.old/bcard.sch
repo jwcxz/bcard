@@ -1,0 +1,358 @@
+EESchema Schematic File Version 2  date Sat 28 Jul 2012 10:07:20 PM EDT
+LIBS:power
+LIBS:device
+LIBS:transistors
+LIBS:conn
+LIBS:linear
+LIBS:regul
+LIBS:74xx
+LIBS:cmos4000
+LIBS:adc-dac
+LIBS:memory
+LIBS:xilinx
+LIBS:special
+LIBS:microcontrollers
+LIBS:dsp
+LIBS:microchip
+LIBS:analog_switches
+LIBS:motorola
+LIBS:texas
+LIBS:intel
+LIBS:audio
+LIBS:interface
+LIBS:digital-audio
+LIBS:philips
+LIBS:display
+LIBS:cypress
+LIBS:siliconi
+LIBS:opto
+LIBS:atmel
+LIBS:contrib
+LIBS:valves
+LIBS:at42qt1012
+LIBS:atmel2
+LIBS:bc846a
+LIBS:logo
+LIBS:bcard-cache
+EELAYER 25  0
+EELAYER END
+$Descr USLetter 11000 8500
+encoding utf-8
+Sheet 1 1
+Title "bcard"
+Date "29 jul 2012"
+Rev "1.3"
+Comp "J. Colosimo"
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L LED D4
+U 1 1 4F5860C5
+P 7100 2350
+F 0 "D4" H 7100 2450 50  0000 C CNN
+F 1 "LED" H 7100 2250 50  0000 C CNN
+F 2 "1208vert" H 7100 2350 50  0001 C CNN
+F 4 "APT3216QBC/D" H 7100 2350 60  0001 C CNN "Part"
+F 5 "http://www.digikey.com/product-detail/en/APA3010QBC%2FD-GX/754-1582-1-ND/2757973" H 7100 2350 60  0001 C CNN "URL"
+	1    7100 2350
+	0    1    1    0   
+$EndComp
+$Comp
+L LED D3
+U 1 1 4F5860C2
+P 6800 2350
+F 0 "D3" H 6800 2450 50  0000 C CNN
+F 1 "LED" H 6800 2250 50  0000 C CNN
+F 2 "1208vert" H 6800 2350 50  0001 C CNN
+F 4 "APT3216QBC/D" H 6800 2350 60  0001 C CNN "Part"
+F 5 "http://www.digikey.com/product-detail/en/APA3010QBC%2FD-GX/754-1582-1-ND/2757973" H 6800 2350 60  0001 C CNN "URL"
+	1    6800 2350
+	0    1    1    0   
+$EndComp
+$Comp
+L LED D2
+U 1 1 4F5860BF
+P 6500 2350
+F 0 "D2" H 6500 2450 50  0000 C CNN
+F 1 "LED" H 6500 2250 50  0000 C CNN
+F 2 "1208vert" H 6500 2350 50  0001 C CNN
+F 4 "APT3216QBC/D" H 6500 2350 60  0001 C CNN "Part"
+F 5 "http://www.digikey.com/product-detail/en/APA3010QBC%2FD-GX/754-1582-1-ND/2757973" H 6500 2350 60  0001 C CNN "URL"
+	1    6500 2350
+	0    1    1    0   
+$EndComp
+$Comp
+L R R1
+U 1 1 4F57ACF5
+P 6250 4150
+F 0 "R1" V 6330 4150 50  0000 C CNN
+F 1 "4.55M" V 6250 4150 50  0000 C CNN
+F 2 "SM0603" V 6350 4150 50  0001 C CNN
+F 4 "RC0603JR-071ML" V 6250 4150 60  0001 C CNN "Part"
+F 5 "http://search.digikey.com/us/en/products/RC0603JR-071ML/311-1.0MGRCT-ND/729625" V 6250 4150 60  0001 C CNN "URL"
+	1    6250 4150
+	1    0    0    -1  
+$EndComp
+$Comp
+L GND #PWR01
+U 1 1 4F57AAA7
+P 3050 3750
+F 0 "#PWR01" H 3050 3750 30  0001 C CNN
+F 1 "GND" H 3050 3680 30  0001 C CNN
+	1    3050 3750
+	1    0    0    -1  
+$EndComp
+$Comp
+L VCC #PWR02
+U 1 1 4F57AAA0
+P 3050 3350
+F 0 "#PWR02" H 3050 3450 30  0001 C CNN
+F 1 "VCC" H 3050 3450 30  0000 C CNN
+	1    3050 3350
+	1    0    0    -1  
+$EndComp
+$Comp
+L CONN_2 P1
+U 1 1 4F57AA8F
+P 2650 3550
+F 0 "P1" V 2600 3550 40  0000 C CNN
+F 1 "BATT" V 2700 3550 40  0000 C CNN
+F 2 "2032BATTHOLDER" V 2800 3550 40  0001 C CNN
+F 4 "BK-912" V 2650 3550 60  0001 C CNN "Part"
+F 5 "http://www.digikey.com/product-detail/en/BK-912/BK-912-ND/2647825" V 2650 3550 60  0001 C CNN "URL"
+	1    2650 3550
+	-1   0    0    -1  
+$EndComp
+$Comp
+L GND #PWR03
+U 1 1 4F57A9AD
+P 6650 3200
+F 0 "#PWR03" H 6650 3200 30  0001 C CNN
+F 1 "GND" H 6650 3130 30  0001 C CNN
+	1    6650 3200
+	1    0    0    -1  
+$EndComp
+$Comp
+L VCC #PWR04
+U 1 1 4F57A992
+P 6650 2050
+F 0 "#PWR04" H 6650 2150 30  0001 C CNN
+F 1 "VCC" H 6650 2150 30  0000 C CNN
+	1    6650 2050
+	1    0    0    -1  
+$EndComp
+$Comp
+L LED D1
+U 1 1 4F57A951
+P 6200 2350
+F 0 "D1" H 6200 2450 50  0000 C CNN
+F 1 "LED" H 6200 2250 50  0000 C CNN
+F 2 "1208vert" H 6200 2350 50  0001 C CNN
+F 4 "APT3216QBC/D" H 6200 2350 60  0001 C CNN "Part"
+F 5 "http://www.digikey.com/product-detail/en/APA3010QBC%2FD-GX/754-1582-1-ND/2757973" H 6200 2350 60  0001 C CNN "URL"
+	1    6200 2350
+	0    1    1    0   
+$EndComp
+$Comp
+L BC846A Q1
+U 1 1 4F57A871
+P 6550 2900
+F 0 "Q1" H 6550 2750 50  0000 R CNN
+F 1 "BC846A" H 6550 3050 50  0000 R CNN
+F 2 "SOT23" H 6550 3150 50  0001 C CNN
+F 4 "BC846A" H 6550 2900 60  0001 C CNN "Part"
+F 5 "http://search.digikey.com/us/en/products/BC846A,215/568-4866-1-ND/2122195" H 6550 2900 60  0001 C CNN "URL"
+	1    6550 2900
+	1    0    0    -1  
+$EndComp
+$Comp
+L C C1
+U 1 1 4F56F917
+P 3450 3550
+F 0 "C1" H 3500 3650 50  0000 L CNN
+F 1 "10uF" H 3500 3450 50  0000 L CNN
+F 2 "SM0805" H 3500 3550 50  0001 C CNN
+F 4 "GRM21BR60J106KE19L" H 3450 3550 60  0001 C CNN "Part"
+F 5 "http://search.digikey.com/us/en/products/GRM21BR60J106KE19L/490-1717-1-ND/587426" H 3450 3550 60  0001 C CNN "URL"
+	1    3450 3550
+	-1   0    0    -1  
+$EndComp
+$Comp
+L GND #PWR05
+U 1 1 4F56E7DD
+P 3600 3900
+F 0 "#PWR05" H 3600 3900 30  0001 C CNN
+F 1 "GND" H 3600 3830 30  0001 C CNN
+	1    3600 3900
+	-1   0    0    -1  
+$EndComp
+$Comp
+L VCC #PWR06
+U 1 1 4F56E7D3
+P 3600 3200
+F 0 "#PWR06" H 3600 3300 30  0001 C CNN
+F 1 "VCC" H 3600 3300 30  0000 C CNN
+	1    3600 3200
+	-1   0    0    -1  
+$EndComp
+$Comp
+L ATTINY10-TS IC1
+U 1 1 4F56DC44
+P 4800 3550
+F 0 "IC1" H 3900 3950 60  0000 C CNN
+F 1 "ATTINY10-TS" H 5500 3150 60  0000 C CNN
+F 2 "SOT23_6" H 4000 3150 60  0001 C CNN
+F 4 "ATTINY10-TSHR" H 4800 3550 60  0001 C CNN "Part"
+F 5 "http://search.digikey.com/us/en/products/ATTINY10-TSHR/ATTINY10-TSHRCT-ND/2136158" H 4800 3550 60  0001 C CNN "URL"
+	1    4800 3550
+	-1   0    0    -1  
+$EndComp
+Text Label 6250 3200 2    60   ~ 0
+LEDOUT
+$Comp
+L LOGO QRCD1
+U 1 1 4F738885
+P 4000 4250
+F 0 "QRCD1" H 4000 4200 60  0000 C CNN
+F 1 "QRCODE" H 4000 4300 60  0000 C CNN
+F 2 "JWCXZ" H 4000 4400 60  0001 C CNN
+	1    4000 4250
+	1    0    0    -1  
+$EndComp
+Text Label 6650 2650 0    60   ~ 0
+LEDDRV
+$Comp
+L R R2
+U 1 1 4FBF9F06
+P 6550 4150
+F 0 "R2" V 6630 4150 50  0000 C CNN
+F 1 "4.55M" V 6550 4150 50  0000 C CNN
+F 2 "SM0603" V 6650 4150 50  0001 C CNN
+F 4 "RC0603JR-071ML" V 6550 4150 60  0001 C CNN "Part"
+F 5 "http://search.digikey.com/us/en/products/RC0603JR-071ML/311-1.0MGRCT-ND/729625" V 6550 4150 60  0001 C CNN "URL"
+	1    6550 4150
+	1    0    0    -1  
+$EndComp
+$Comp
+L GND #PWR07
+U 1 1 50149854
+P 6550 4500
+F 0 "#PWR07" H 6550 4500 30  0001 C CNN
+F 1 "GND" H 6550 4430 30  0001 C CNN
+	1    6550 4500
+	1    0    0    -1  
+$EndComp
+Text Label 6050 3500 0    60   ~ 0
+LEFT/FDRV
+Text Label 6300 3700 0    60   ~ 0
+RIGHT
+$Comp
+L R R3
+U 1 1 5014997D
+P 6850 4150
+F 0 "R3" V 6930 4150 50  0000 C CNN
+F 1 "1M" V 6850 4150 50  0000 C CNN
+F 2 "SM0603" V 6950 4150 50  0001 C CNN
+F 4 "RC0603JR-071ML" V 6850 4150 60  0001 C CNN "Part"
+F 5 "http://search.digikey.com/us/en/products/RC0603JR-071ML/311-1.0MGRCT-ND/729625" V 6850 4150 60  0001 C CNN "URL"
+	1    6850 4150
+	1    0    0    -1  
+$EndComp
+Text Label 6650 3600 0    60   ~ 0
+FINP
+$Comp
+L CONN_4 SENSOR1
+U 1 1 50149BEB
+P 7350 3650
+F 0 "SENSOR1" V 7300 3650 50  0000 C CNN
+F 1 "CONN_4" V 7400 3650 50  0000 C CNN
+F 2 "SENSOR2" V 7500 3650 50  0001 C CNN
+	1    7350 3650
+	1    0    0    -1  
+$EndComp
+$Comp
+L GND #PWR08
+U 1 1 50149E29
+P 7000 3900
+F 0 "#PWR08" H 7000 3900 30  0001 C CNN
+F 1 "GND" H 7000 3830 30  0001 C CNN
+	1    7000 3900
+	1    0    0    -1  
+$EndComp
+Text Notes 7100 4150 0    60   ~ 0
+LEFT and RIGHT are capacitive sensor pads\nFDRV is the floating sensor's driver pad\nFINP is the floating sensor's input pad
+Text Notes 4450 4000 0    60   ~ 0
+Any of the ATtiny4/5/9/10\nfamily should work
+Text Notes 7300 2300 0    60   ~ 0
+Because Vcc is lower than the LED\nnominal voltage, there is no extra\ncurrent limiting needed
+Wire Wire Line
+	3050 3350 3050 3450
+Wire Wire Line
+	3050 3450 3000 3450
+Connection ~ 6650 2150
+Wire Wire Line
+	6650 2150 6650 2050
+Connection ~ 6500 2150
+Wire Wire Line
+	6200 2150 7100 2150
+Connection ~ 6500 2550
+Wire Wire Line
+	3450 3800 3600 3800
+Wire Wire Line
+	3450 3800 3450 3750
+Wire Wire Line
+	3600 3200 3600 3300
+Wire Wire Line
+	3600 3800 3600 3900
+Wire Wire Line
+	3600 3300 3450 3300
+Wire Wire Line
+	3450 3300 3450 3350
+Wire Wire Line
+	7100 2550 6200 2550
+Connection ~ 6800 2550
+Connection ~ 6800 2150
+Wire Wire Line
+	6650 2550 6650 2700
+Connection ~ 6650 2550
+Wire Wire Line
+	6650 3100 6650 3200
+Wire Wire Line
+	3000 3650 3050 3650
+Wire Wire Line
+	3050 3650 3050 3750
+Wire Wire Line
+	6000 3500 7000 3500
+Wire Wire Line
+	6250 3500 6250 3900
+Wire Wire Line
+	6000 3700 7000 3700
+Wire Wire Line
+	6000 3600 7000 3600
+Wire Wire Line
+	6850 3600 6850 3900
+Wire Wire Line
+	6550 3700 6550 3900
+Wire Wire Line
+	6250 4400 6850 4400
+Connection ~ 6550 4400
+Wire Wire Line
+	6550 4400 6550 4500
+Connection ~ 6250 3500
+Connection ~ 6250 3500
+Connection ~ 6850 3600
+Connection ~ 6850 3600
+Connection ~ 6550 3700
+Connection ~ 6550 3700
+Wire Wire Line
+	7000 3800 7000 3900
+Wire Wire Line
+	6000 3400 6250 3400
+Wire Wire Line
+	6250 3400 6250 2900
+Wire Wire Line
+	6250 2900 6350 2900
+$EndSCHEMATC
